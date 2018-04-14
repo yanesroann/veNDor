@@ -8,10 +8,11 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
+import FirebaseDatabase
+import JSQMessagesViewController
+//import KeychainSwift
 
 class SignUpViewController: UIViewController {
-
 
 
     @IBOutlet weak var fullNameField: UITextField!
@@ -27,7 +28,7 @@ class SignUpViewController: UIViewController {
                 AlertController.showAlert(self, title: "Error while signing up!", message: "Please make sure all fields are filled out and reconfirm password.")
                 return
         }
-        
+
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             guard error == nil else {
                 AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
@@ -36,7 +37,7 @@ class SignUpViewController: UIViewController {
             guard let user = user else {return}
             print(user.email ?? "Missing Email")
             print(user.uid)
-            
+
             let changeRequest = user.createProfileChangeRequest()
             changeRequest.displayName = fullName
             changeRequest.commitChanges(completion: { (error) in

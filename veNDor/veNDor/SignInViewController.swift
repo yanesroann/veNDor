@@ -18,7 +18,11 @@ class SignInViewController: UIViewController {
         
     @IBOutlet weak var emailField:UITextField!
     @IBOutlet weak var passwordField:UITextField!
+    @IBAction func onSignUpPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "signUpPage", sender: nil)
         
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -67,16 +71,16 @@ class SignInViewController: UIViewController {
                     self.performSegue(withIdentifier: "signInSegue", sender: nil)
                 }
             }
-            if error != nil {
-//                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
-//                print("Error: \(String(describing:error!.localizedDescription))")
-                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
-                //return
-            }
-            guard let user = user else { return }
-            print(user.email ?? "Missing email")
-            print(user.displayName ?? "Missing display name")
-            print(user.uid)
+//            if error != nil {
+////                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
+////                print("Error: \(String(describing:error!.localizedDescription))")
+//                self.performSegue(withIdentifier: "signUpPage", sender: nil)
+//                //return
+//            }
+//            guard let user = user else { return }
+//            print(user.email ?? "Missing email")
+//            print(user.displayName ?? "Missing display name")
+//            print(user.uid)
         })
     }
 }
