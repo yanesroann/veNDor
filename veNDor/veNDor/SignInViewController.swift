@@ -9,12 +9,11 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-import JSQMessagesViewController
-import KeychainSwift
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
-    let keyChain = DataService().keyChain
+    //let keyChain = DataService().keyChain
         
     @IBOutlet weak var emailField:UITextField!
     @IBOutlet weak var passwordField:UITextField!
@@ -26,16 +25,16 @@ class SignInViewController: UIViewController {
     
     // user sign in and email authentication
     override func viewDidAppear(_ animated: Bool) {
-        let keyChain = DataService().keyChain
-        if keyChain.get("uid") != nil {
-            performSegue(withIdentifier: "signInSegue", sender: nil)
-        }
+        //let keyChain = DataService().keyChain
+//        if keyChain.get("uid") != nil {
+//            performSegue(withIdentifier: "signInSegue", sender: nil)
+//        }
     }
     
-    func CompleteSignIn(id: String) {
-        let keyChain = DataService().keyChain
-        keyChain.set(id, forKey: "uid")
-    }
+//    func CompleteSignIn(id: String) {
+//        let keyChain = DataService().keyChain
+//        keyChain.set(id, forKey: "uid")
+//    }
     
     @IBAction func onSignInPressed(_ sender: Any) {
         guard let email = emailField.text, email != "",
@@ -54,7 +53,7 @@ class SignInViewController: UIViewController {
                             if error != nil {
                                 AlertController.showAlert(self, title: "Email Verification!", message: "Email verification failed to send: \(error!.localizedDescription)")
                             } else {
-                                AlertController.showAlert(self, title: "Email Verification!", message: "Email verification has been sent. Please tap on the link in the email to verify ypur account before you can use the features in the app.")
+                                AlertController.showAlert(self, title: "Email Verification!", message: "Email verification has been sent. Please tap on the link in the email to verify your account before you can use the features in the app.")
                             }
                         })
                     }
@@ -64,16 +63,16 @@ class SignInViewController: UIViewController {
                     alertVC.addAction(alertActionCancel)
                     self.present(alertVC, animated: true, completion: nil)
                 } else {
-                    self.CompleteSignIn(id: user!.uid)
+                    //self.CompleteSignIn(id: user!.uid)
                     self.performSegue(withIdentifier: "signInSegue", sender: nil)
                 }
             }
-//            if error != nil {
-////                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
-////                print("Error: \(String(describing:error!.localizedDescription))")
-//                self.performSegue(withIdentifier: "signUpPage", sender: nil)
-//                //return
-//            }
+            if error != nil {
+                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
+                print("Error: \(String(describing:error!.localizedDescription))")
+                //self.performSegue(withIdentifier: "signUpPage", sender: nil)
+                return
+            }
 //            guard let user = user else { return }
 //            print(user.email ?? "Missing email")
 //            print(user.displayName ?? "Missing display name")
