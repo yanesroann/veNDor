@@ -48,11 +48,11 @@ class SignInViewController: UIViewController {
                 self.CompleteSignIn(id: user!.uid)
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
             }
-            else {
+            if user == nil {
 //                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
 //                print("Error: \(String(describing:error!.localizedDescription))")
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
-                return
+                //return
             }
             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                 if error != nil {
