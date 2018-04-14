@@ -1,0 +1,859 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BFE023DA1AADEAAED03A4C8 /* Pods_veNDorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */; };
+		982DBFF62075240500959356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982DBFF52075240500959356 /* AppDelegate.swift */; };
+		982DBFFB2075240500959356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982DBFF92075240500959356 /* Main.storyboard */; };
+		982DBFFE2075240500959356 /* veNDor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 982DBFFC2075240500959356 /* veNDor.xcdatamodeld */; };
+		982DC0002075240500959356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 982DBFFF2075240500959356 /* Assets.xcassets */; };
+		982DC0032075240600959356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982DC0012075240600959356 /* LaunchScreen.storyboard */; };
+		982DC00E2075240600959356 /* veNDorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982DC00D2075240600959356 /* veNDorTests.swift */; };
+		982DC0192075240600959356 /* veNDorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982DC0182075240600959356 /* veNDorUITests.swift */; };
+		982DC027207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
+		982DC028207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
+		982DC029207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
+		983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
+		983E772C207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
+		983E772D207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
+		98588103207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
+		98588104207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
+		98588105207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
+		98727A01207B0CEE003541A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A00207B0CED003541A9 /* Constants.swift */; };
+		98727A0F207BDBD7003541A9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A0E207BDBD7003541A9 /* ChatViewController.swift */; };
+		98727A10207BDBD7003541A9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A0E207BDBD7003541A9 /* ChatViewController.swift */; };
+		98727A11207BDBD7003541A9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A0E207BDBD7003541A9 /* ChatViewController.swift */; };
+		98BED49B207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
+		98BED49C207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
+		98BED49D207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
+		98BED49F207AE81A0005D7AE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49E207AE81A0005D7AE /* SignInViewController.swift */; };
+		98BED4A0207AE81A0005D7AE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49E207AE81A0005D7AE /* SignInViewController.swift */; };
+		98BED4A1207AE81A0005D7AE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49E207AE81A0005D7AE /* SignInViewController.swift */; };
+		98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
+		98BED4A4207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
+		98BED4A5207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
+		DB04CD070E125CDD37B965B2 /* Pods_veNDorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */; };
+		EF2F9F252EA93073200295A7 /* Pods_veNDor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB093322B2F8843DF379FD5 /* Pods_veNDor.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		982DC00A2075240600959356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 982DBFEA2075240500959356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 982DBFF12075240500959356;
+			remoteInfo = veNDor;
+		};
+		982DC0152075240600959356 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 982DBFEA2075240500959356 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 982DBFF12075240500959356;
+			remoteInfo = veNDor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B602E1A64DD9D49F9F17F47 /* Pods-veNDor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDor.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDor/Pods-veNDor.release.xcconfig"; sourceTree = "<group>"; };
+		38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C575A14E707A5D622D9111 /* Pods-veNDor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veNDor/Pods-veNDor.debug.xcconfig"; sourceTree = "<group>"; };
+		42732BEF8E1E9A790C02F0B3 /* Pods-veNDorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veNDorUITests/Pods-veNDorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		44A3E8B5876A115E90704820 /* Pods-veNDorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veNDorTests/Pods-veNDorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CB093322B2F8843DF379FD5 /* Pods_veNDor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA24F40C88DBE0CF3C2EF2C /* Pods-veNDorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDorUITests/Pods-veNDorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		83292319A5B41D2BA08802C3 /* Pods-veNDorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDorTests/Pods-veNDorTests.release.xcconfig"; sourceTree = "<group>"; };
+		982DBFF22075240500959356 /* veNDor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = veNDor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		982DBFF52075240500959356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		982DBFFA2075240500959356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		982DBFFD2075240500959356 /* veNDor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = veNDor.xcdatamodel; sourceTree = "<group>"; };
+		982DBFFF2075240500959356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		982DC0022075240600959356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		982DC0042075240600959356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		982DC0092075240600959356 /* veNDorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = veNDorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		982DC00D2075240600959356 /* veNDorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = veNDorTests.swift; sourceTree = "<group>"; };
+		982DC00F2075240600959356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		982DC0142075240600959356 /* veNDorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = veNDorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		982DC0182075240600959356 /* veNDorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = veNDorUITests.swift; sourceTree = "<group>"; };
+		982DC01A2075240600959356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		982DC026207524BF00959356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		983E772A207986DA00AB1425 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		98588102207B09F500D7CDF7 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		98727A00207B0CED003541A9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		98727A0E207BDBD7003541A9 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		98727A12207BDC37003541A9 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		98BED49A207AE7090005D7AE /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		98BED49E207AE81A0005D7AE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		98BED4A2207AF2F70005D7AE /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		982DBFEF2075240500959356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2F9F252EA93073200295A7 /* Pods_veNDor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982DC0062075240600959356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BFE023DA1AADEAAED03A4C8 /* Pods_veNDorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982DC0112075240600959356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB04CD070E125CDD37B965B2 /* Pods_veNDorUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		982DBFE92075240500959356 = {
+			isa = PBXGroup;
+			children = (
+				98727A12207BDC37003541A9 /* Bridging-Header.h */,
+				98727A00207B0CED003541A9 /* Constants.swift */,
+				982DBFF42075240500959356 /* veNDor */,
+				982DC00C2075240600959356 /* veNDorTests */,
+				982DC0172075240600959356 /* veNDorUITests */,
+				982DBFF32075240500959356 /* Products */,
+				E3B58066BC01F078CB2DD469 /* Pods */,
+				BE2D2E1DAD5CE7C31867EE32 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		982DBFF32075240500959356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				982DBFF22075240500959356 /* veNDor.app */,
+				982DC0092075240600959356 /* veNDorTests.xctest */,
+				982DC0142075240600959356 /* veNDorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		982DBFF42075240500959356 /* veNDor */ = {
+			isa = PBXGroup;
+			children = (
+				982DBFF52075240500959356 /* AppDelegate.swift */,
+				98727A0E207BDBD7003541A9 /* ChatViewController.swift */,
+				983E772A207986DA00AB1425 /* SignUpViewController.swift */,
+				98BED4A2207AF2F70005D7AE /* AlertController.swift */,
+				98BED49E207AE81A0005D7AE /* SignInViewController.swift */,
+				98588102207B09F500D7CDF7 /* DataService.swift */,
+				98BED49A207AE7090005D7AE /* SignOutViewController.swift */,
+				982DBFF92075240500959356 /* Main.storyboard */,
+				982DBFFF2075240500959356 /* Assets.xcassets */,
+				982DC0012075240600959356 /* LaunchScreen.storyboard */,
+				982DC0042075240600959356 /* Info.plist */,
+				982DC026207524BF00959356 /* GoogleService-Info.plist */,
+				982DBFFC2075240500959356 /* veNDor.xcdatamodeld */,
+			);
+			path = veNDor;
+			sourceTree = "<group>";
+		};
+		982DC00C2075240600959356 /* veNDorTests */ = {
+			isa = PBXGroup;
+			children = (
+				982DC00D2075240600959356 /* veNDorTests.swift */,
+				982DC00F2075240600959356 /* Info.plist */,
+			);
+			path = veNDorTests;
+			sourceTree = "<group>";
+		};
+		982DC0172075240600959356 /* veNDorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				982DC0182075240600959356 /* veNDorUITests.swift */,
+				982DC01A2075240600959356 /* Info.plist */,
+			);
+			path = veNDorUITests;
+			sourceTree = "<group>";
+		};
+		BE2D2E1DAD5CE7C31867EE32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CB093322B2F8843DF379FD5 /* Pods_veNDor.framework */,
+				38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */,
+				A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3B58066BC01F078CB2DD469 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41C575A14E707A5D622D9111 /* Pods-veNDor.debug.xcconfig */,
+				1B602E1A64DD9D49F9F17F47 /* Pods-veNDor.release.xcconfig */,
+				44A3E8B5876A115E90704820 /* Pods-veNDorTests.debug.xcconfig */,
+				83292319A5B41D2BA08802C3 /* Pods-veNDorTests.release.xcconfig */,
+				42732BEF8E1E9A790C02F0B3 /* Pods-veNDorUITests.debug.xcconfig */,
+				6CA24F40C88DBE0CF3C2EF2C /* Pods-veNDorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		982DBFF12075240500959356 /* veNDor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 982DC01D2075240600959356 /* Build configuration list for PBXNativeTarget "veNDor" */;
+			buildPhases = (
+				3675BA2CDA2FCCDF1A2B7328 /* [CP] Check Pods Manifest.lock */,
+				982DBFEE2075240500959356 /* Sources */,
+				982DBFEF2075240500959356 /* Frameworks */,
+				982DBFF02075240500959356 /* Resources */,
+				820861F953B013771D61A580 /* [CP] Embed Pods Frameworks */,
+				5A0142FCF0976BDD22EE1DD8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = veNDor;
+			productName = veNDor;
+			productReference = 982DBFF22075240500959356 /* veNDor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		982DC0082075240600959356 /* veNDorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 982DC0202075240600959356 /* Build configuration list for PBXNativeTarget "veNDorTests" */;
+			buildPhases = (
+				8AC565F152E0D0CF1B0FC239 /* [CP] Check Pods Manifest.lock */,
+				982DC0052075240600959356 /* Sources */,
+				982DC0062075240600959356 /* Frameworks */,
+				982DC0072075240600959356 /* Resources */,
+				A3B8BC68B27209F39F258EC4 /* [CP] Embed Pods Frameworks */,
+				2F2C61ADD411E2AD671867DD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				982DC00B2075240600959356 /* PBXTargetDependency */,
+			);
+			name = veNDorTests;
+			productName = veNDorTests;
+			productReference = 982DC0092075240600959356 /* veNDorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		982DC0132075240600959356 /* veNDorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 982DC0232075240600959356 /* Build configuration list for PBXNativeTarget "veNDorUITests" */;
+			buildPhases = (
+				F09D0F3A2A0A19E9CB1E4EE8 /* [CP] Check Pods Manifest.lock */,
+				982DC0102075240600959356 /* Sources */,
+				982DC0112075240600959356 /* Frameworks */,
+				982DC0122075240600959356 /* Resources */,
+				FA7D0F5F0EDB221859DCBBF3 /* [CP] Embed Pods Frameworks */,
+				36A4862B8968AFA66BC3252C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				982DC0162075240600959356 /* PBXTargetDependency */,
+			);
+			name = veNDorUITests;
+			productName = veNDorUITests;
+			productReference = 982DC0142075240600959356 /* veNDorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		982DBFEA2075240500959356 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "veNDor Team";
+				TargetAttributes = {
+					982DBFF12075240500959356 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					982DC0082075240600959356 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 982DBFF12075240500959356;
+					};
+					982DC0132075240600959356 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 982DBFF12075240500959356;
+					};
+				};
+			};
+			buildConfigurationList = 982DBFED2075240500959356 /* Build configuration list for PBXProject "veNDor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 982DBFE92075240500959356;
+			productRefGroup = 982DBFF32075240500959356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				982DBFF12075240500959356 /* veNDor */,
+				982DC0082075240600959356 /* veNDorTests */,
+				982DC0132075240600959356 /* veNDorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		982DBFF02075240500959356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				982DC0032075240600959356 /* LaunchScreen.storyboard in Resources */,
+				982DC027207524BF00959356 /* GoogleService-Info.plist in Resources */,
+				982DC0002075240500959356 /* Assets.xcassets in Resources */,
+				982DBFFB2075240500959356 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982DC0072075240600959356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				982DC028207524BF00959356 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982DC0122075240600959356 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				982DC029207524BF00959356 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F2C61ADD411E2AD671867DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-veNDorTests/Pods-veNDorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3675BA2CDA2FCCDF1A2B7328 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-veNDor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36A4862B8968AFA66BC3252C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-veNDorUITests/Pods-veNDorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A0142FCF0976BDD22EE1DD8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-veNDor/Pods-veNDor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		820861F953B013771D61A580 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-veNDor/Pods-veNDor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-veNDor/Pods-veNDor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AC565F152E0D0CF1B0FC239 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-veNDorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B8BC68B27209F39F258EC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-veNDorTests/Pods-veNDorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F09D0F3A2A0A19E9CB1E4EE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-veNDorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA7D0F5F0EDB221859DCBBF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-veNDorUITests/Pods-veNDorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		982DBFEE2075240500959356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				982DBFFE2075240500959356 /* veNDor.xcdatamodeld in Sources */,
+				98588103207B09F600D7CDF7 /* DataService.swift in Sources */,
+				98BED49B207AE7090005D7AE /* SignOutViewController.swift in Sources */,
+				983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */,
+				98BED49F207AE81A0005D7AE /* SignInViewController.swift in Sources */,
+				98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */,
+				982DBFF62075240500959356 /* AppDelegate.swift in Sources */,
+				98727A0F207BDBD7003541A9 /* ChatViewController.swift in Sources */,
+				98727A01207B0CEE003541A9 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982DC0052075240600959356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98BED4A0207AE81A0005D7AE /* SignInViewController.swift in Sources */,
+				98BED4A4207AF2F70005D7AE /* AlertController.swift in Sources */,
+				983E772C207986DA00AB1425 /* SignUpViewController.swift in Sources */,
+				98727A10207BDBD7003541A9 /* ChatViewController.swift in Sources */,
+				98588104207B09F600D7CDF7 /* DataService.swift in Sources */,
+				98BED49C207AE7090005D7AE /* SignOutViewController.swift in Sources */,
+				982DC00E2075240600959356 /* veNDorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		982DC0102075240600959356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98BED4A1207AE81A0005D7AE /* SignInViewController.swift in Sources */,
+				98BED4A5207AF2F70005D7AE /* AlertController.swift in Sources */,
+				983E772D207986DA00AB1425 /* SignUpViewController.swift in Sources */,
+				98727A11207BDBD7003541A9 /* ChatViewController.swift in Sources */,
+				98588105207B09F600D7CDF7 /* DataService.swift in Sources */,
+				98BED49D207AE7090005D7AE /* SignOutViewController.swift in Sources */,
+				982DC0192075240600959356 /* veNDorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		982DC00B2075240600959356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 982DBFF12075240500959356 /* veNDor */;
+			targetProxy = 982DC00A2075240600959356 /* PBXContainerItemProxy */;
+		};
+		982DC0162075240600959356 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 982DBFF12075240500959356 /* veNDor */;
+			targetProxy = 982DC0152075240600959356 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		982DBFF92075240500959356 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				982DBFFA2075240500959356 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		982DC0012075240600959356 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				982DC0022075240600959356 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		982DC01B2075240600959356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		982DC01C2075240600959356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		982DC01E2075240600959356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C575A14E707A5D622D9111 /* Pods-veNDor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT2A5J2K76;
+				INFOPLIST_FILE = veNDor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = veNDor.veNDor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		982DC01F2075240600959356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B602E1A64DD9D49F9F17F47 /* Pods-veNDor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT2A5J2K76;
+				INFOPLIST_FILE = veNDor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = veNDor.veNDor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		982DC0212075240600959356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A3E8B5876A115E90704820 /* Pods-veNDorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT2A5J2K76;
+				INFOPLIST_FILE = veNDorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = veNDor.veNDorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/veNDor.app/veNDor";
+			};
+			name = Debug;
+		};
+		982DC0222075240600959356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83292319A5B41D2BA08802C3 /* Pods-veNDorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT2A5J2K76;
+				INFOPLIST_FILE = veNDorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = veNDor.veNDorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/veNDor.app/veNDor";
+			};
+			name = Release;
+		};
+		982DC0242075240600959356 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42732BEF8E1E9A790C02F0B3 /* Pods-veNDorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT2A5J2K76;
+				INFOPLIST_FILE = veNDorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = veNDor.veNDorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = veNDor;
+			};
+			name = Debug;
+		};
+		982DC0252075240600959356 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CA24F40C88DBE0CF3C2EF2C /* Pods-veNDorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT2A5J2K76;
+				INFOPLIST_FILE = veNDorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = veNDor.veNDorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = veNDor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		982DBFED2075240500959356 /* Build configuration list for PBXProject "veNDor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				982DC01B2075240600959356 /* Debug */,
+				982DC01C2075240600959356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		982DC01D2075240600959356 /* Build configuration list for PBXNativeTarget "veNDor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				982DC01E2075240600959356 /* Debug */,
+				982DC01F2075240600959356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		982DC0202075240600959356 /* Build configuration list for PBXNativeTarget "veNDorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				982DC0212075240600959356 /* Debug */,
+				982DC0222075240600959356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		982DC0232075240600959356 /* Build configuration list for PBXNativeTarget "veNDorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				982DC0242075240600959356 /* Debug */,
+				982DC0252075240600959356 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		982DBFFC2075240500959356 /* veNDor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				982DBFFD2075240500959356 /* veNDor.xcdatamodel */,
+			);
+			currentVersion = 982DBFFD2075240500959356 /* veNDor.xcdatamodel */;
+			path = veNDor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 982DBFEA2075240500959356 /* Project object */;
+}

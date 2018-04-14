@@ -1,0 +1,6 @@
+framework module Pods_veNDor {
+  umbrella header "Pods-veNDor-umbrella.h"
+
+  export *
+  module * { export * }
+}
