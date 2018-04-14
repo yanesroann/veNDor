@@ -44,23 +44,35 @@ class SignInViewController: UIViewController {
                 return
         }
         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-            if error == nil {
-                self.CompleteSignIn(id: user!.uid)
-                self.performSegue(withIdentifier: "signInSegue", sender: nil)
+            if let u = Auth.auth().currentUser {
+                if !u.isEmailVerified{
+                    let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(email)?", preferredStyle: .alert)
+                    let alertActionOkay = UIAlertAction(title: "Okay", style: .default) {
+                        (_) in
+                        Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                            if error != nil {
+                                AlertController.showAlert(self, title: "Email Verification!", message: "Email verification failed to send: \(error!.localizedDescription)")
+                            } else {
+                                AlertController.showAlert(self, title: "Email Verification!", message: "Email verification has been sent. Please tap on the link in the email to verify ypur account before you can use the features in the app.")
+                            }
+                        })
+                    }
+                    let alertActionCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                    
+                    alertVC.addAction(alertActionOkay)
+                    alertVC.addAction(alertActionCancel)
+                    self.present(alertVC, animated: true, completion: nil)
+                } else {
+                    self.CompleteSignIn(id: user!.uid)
+                    self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                }
             }
-            if user == nil {
+            if error != nil {
 //                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
 //                print("Error: \(String(describing:error!.localizedDescription))")
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
                 //return
             }
-            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
-                if error != nil {
-                    AlertController.showAlert(self, title: "Email Verification!", message: "Email verification failed to send: \(error!.localizedDescription)")
-                } else {
-                    AlertController.showAlert(self, title: "Email Verification!", message: "Email verification has been sent. Please tap on the link in the email to verify ypur account before you can use the features in the app.")
-                }
-            })
             guard let user = user else { return }
             print(user.email ?? "Missing email")
             print(user.displayName ?? "Missing display name")

@@ -25,9 +25,11 @@ class SignOutViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             performSegue(withIdentifier: "signOutSegue", sender: nil)
-        } catch {
-            print(error)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
         }
+        DataService().keyChain.delete("uid")
+        dismiss(animated: true, completion: nil)
         
     }
 }
