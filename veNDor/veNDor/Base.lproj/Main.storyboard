@@ -446,7 +446,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="sign"/>
                                 <connections>
-                                    <segue destination="sgi-se-eTs" kind="show" id="abO-YR-wRH"/>
+                                    <segue destination="sgi-se-eTs" kind="show" identifier="signUpPage" id="abO-YR-wRH"/>
                                 </connections>
                             </button>
                         </subviews>
