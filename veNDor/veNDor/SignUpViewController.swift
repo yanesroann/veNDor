@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import KeychainSwift
+import SwiftKeychainWrapper
 
 
 class SignUpViewController: UIViewController {
@@ -17,6 +19,23 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
+    var userUID: String!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: "uid") {
+            performSegue(withIdentifier: "signInSegue", sender: nil)
+        }
+    }
+    
+    func setUser() {
+        let userData = [
+            "name": fullNameField!
+        ]
+        KeychainWrapper.standard.set(self.userUID, forKey: "uid")
+        let location = Database.database().reference().child("users").child(userUID)
+        location.setValue(userData)
+        dismiss(animated: true, completion: nil)
+    }
 
     @IBAction func onSignUpPressed(_ sender: Any) {
         guard let fullName = fullNameField.text, fullName != "",
@@ -26,27 +45,21 @@ class SignUpViewController: UIViewController {
             else {
                 AlertController.showAlert(self, title: "Error while signing up!", message: "Please make sure all fields are filled out and reconfirm password.")
                 return
-        }
-
-        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-            guard error == nil else {
-                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
-                return
             }
-            guard let user = user else {return}
-            print(user.email ?? "Missing Email")
-            print(user.uid)
-
-            let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = fullName
-            changeRequest.commitChanges(completion: { (error) in
+            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                 guard error == nil else {
                     AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
                     return
                 }
+                if let user = user {
+                    self.userUID = user.uid
+                }
+                guard let user = user else { return }
+                print(user.email ?? "Missing Email")
+                print(user.uid)
+
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
             })
-        })
-    }
+        }
 }
 
