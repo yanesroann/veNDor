@@ -9,16 +9,15 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-import JSQMessagesViewController
-//import KeychainSwift
+import FirebaseAuth
+
 
 class SignUpViewController: UIViewController {
-
-
     @IBOutlet weak var fullNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
+
     @IBAction func onSignUpPressed(_ sender: Any) {
         guard let fullName = fullNameField.text, fullName != "",
             let email = emailField.text, email != "",

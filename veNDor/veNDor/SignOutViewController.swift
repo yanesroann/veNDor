@@ -28,8 +28,8 @@ class SignOutViewController: UIViewController {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-        DataService().keyChain.delete("uid")
-        dismiss(animated: true, completion: nil)
+        //DataService().keyChain.delete("uid")
+        //dismiss(animated: true, completion: nil)
         
     }
 }
