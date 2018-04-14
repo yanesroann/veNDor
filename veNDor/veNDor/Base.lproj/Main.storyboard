@@ -474,7 +474,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="sgi-se-eTs" kind="show" id="abO-YR-wRH"/>
+                                    <segue destination="sgi-se-eTs" kind="show" identifier="signUpPage" id="abO-YR-wRH"/>
                                 </connections>
                             </button>
                         </subviews>
