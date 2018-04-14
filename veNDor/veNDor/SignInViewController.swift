@@ -49,12 +49,9 @@ class SignInViewController: UIViewController {
                 self.performSegue(withIdentifier: "signInSegue", sender: nil)
             }
             else {
-                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
-                self.performSegue(withIdentifier: "newUserSegue", sender: nil)
-                return
-            }
-            if error != nil {
-                print("Error: \(String(describing:error!.localizedDescription))")
+//                AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
+//                print("Error: \(String(describing:error!.localizedDescription))")
+                self.performSegue(withIdentifier: "signUpSegue", sender: nil)
                 return
             }
             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in

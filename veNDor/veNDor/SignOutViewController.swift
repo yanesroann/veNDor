@@ -17,18 +17,17 @@ class SignOutViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        guard let fullName = Auth.auth().currentUser?.displayName else { return }
-//        label.text = "Hello \(fullName)"
+        guard let fullName = Auth.auth().currentUser?.displayName else { return }
+        label.text = "Hello \(fullName)"
     }
 
     @IBAction func onSignOutPressed(_ sender: Any) {
-//        do {
-//            try Auth.auth().signOut()
-//            performSegue(withIdentifier: "signOutSegue", sender: nil)
-//        } catch {
-//            print(error)
-//        }
-//
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "signOutSegue", sender: nil)
+        } catch {
+            print(error)
+        }
         
     }
 }

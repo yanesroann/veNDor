@@ -48,8 +48,8 @@ class SignUpViewController: UIViewController {
             })
         })
     }
-    //    @IBAction func goBackToSignIn(_ sender: Any) {
-    //        self.performSegue(withIdentifier: "goBackToSignIn", sender: nil)
-    //    }
+        @IBAction func goBackToSignIn(_ sender: Any) {
+            self.performSegue(withIdentifier: "goBackToSignIn", sender: nil)
+        }
 }
 
