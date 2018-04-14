@@ -18,10 +18,7 @@ class SignInViewController: UIViewController {
         
     @IBOutlet weak var emailField:UITextField!
     @IBOutlet weak var passwordField:UITextField!
-    @IBAction func onSignUpPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "signUpPage", sender: nil)
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
