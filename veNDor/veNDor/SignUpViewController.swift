@@ -12,14 +12,14 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var firstNameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
+
+
+    @IBOutlet weak var fullNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBAction func onSignUpPressed(_ sender: Any) {
-        guard let firstName = firstNameField.text, firstName != "",
-            let lastName = lastNameField.text, lastName != "",
+        guard let fullName = fullNameField.text, fullName != "",
             let email = emailField.text, email != "",
             let password = passwordField.text, password != "",
             let confirmPassword = confirmPasswordField.text, confirmPassword == password
@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController {
             print(user.uid)
             
             let changeRequest = user.createProfileChangeRequest()
-            changeRequest.displayName = firstName
+            changeRequest.displayName = fullName
             changeRequest.commitChanges(completion: { (error) in
                 guard error == nil else {
                     AlertController.showAlert(self, title: "Error!", message: error!.localizedDescription)
@@ -48,5 +48,8 @@ class SignUpViewController: UIViewController {
             })
         })
     }
+    //    @IBAction func goBackToSignIn(_ sender: Any) {
+    //        self.performSegue(withIdentifier: "goBackToSignIn", sender: nil)
+    //    }
 }
 

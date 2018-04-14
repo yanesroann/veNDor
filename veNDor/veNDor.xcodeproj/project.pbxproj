@@ -25,9 +25,6 @@
 		98588104207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
 		98588105207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
 		98727A01207B0CEE003541A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A00207B0CED003541A9 /* Constants.swift */; };
-		98727A0F207BDBD7003541A9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A0E207BDBD7003541A9 /* ChatViewController.swift */; };
-		98727A10207BDBD7003541A9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A0E207BDBD7003541A9 /* ChatViewController.swift */; };
-		98727A11207BDBD7003541A9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A0E207BDBD7003541A9 /* ChatViewController.swift */; };
 		98BED49B207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
 		98BED49C207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
 		98BED49D207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
@@ -84,7 +81,6 @@
 		983E772A207986DA00AB1425 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		98588102207B09F500D7CDF7 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		98727A00207B0CED003541A9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		98727A0E207BDBD7003541A9 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		98727A12207BDC37003541A9 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		98BED49A207AE7090005D7AE /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		98BED49E207AE81A0005D7AE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				982DBFF52075240500959356 /* AppDelegate.swift */,
-				98727A0E207BDBD7003541A9 /* ChatViewController.swift */,
 				983E772A207986DA00AB1425 /* SignUpViewController.swift */,
 				98BED4A2207AF2F70005D7AE /* AlertController.swift */,
 				98BED49E207AE81A0005D7AE /* SignInViewController.swift */,
@@ -520,7 +515,6 @@
 				98BED49F207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */,
 				982DBFF62075240500959356 /* AppDelegate.swift in Sources */,
-				98727A0F207BDBD7003541A9 /* ChatViewController.swift in Sources */,
 				98727A01207B0CEE003541A9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,7 +526,6 @@
 				98BED4A0207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A4207AF2F70005D7AE /* AlertController.swift in Sources */,
 				983E772C207986DA00AB1425 /* SignUpViewController.swift in Sources */,
-				98727A10207BDBD7003541A9 /* ChatViewController.swift in Sources */,
 				98588104207B09F600D7CDF7 /* DataService.swift in Sources */,
 				98BED49C207AE7090005D7AE /* SignOutViewController.swift in Sources */,
 				982DC00E2075240600959356 /* veNDorTests.swift in Sources */,
@@ -546,7 +539,6 @@
 				98BED4A1207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A5207AF2F70005D7AE /* AlertController.swift in Sources */,
 				983E772D207986DA00AB1425 /* SignUpViewController.swift in Sources */,
-				98727A11207BDBD7003541A9 /* ChatViewController.swift in Sources */,
 				98588105207B09F600D7CDF7 /* DataService.swift in Sources */,
 				98BED49D207AE7090005D7AE /* SignOutViewController.swift in Sources */,
 				982DC0192075240600959356 /* veNDorUITests.swift in Sources */,
