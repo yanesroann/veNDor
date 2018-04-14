@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kne-P8-Im4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kne-P8-Im4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -354,7 +354,7 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="onSignInPressed:" destination="kne-P8-Im4" eventType="touchUpInside" id="gUU-5N-EWc"/>
-                                    <segue destination="mrX-ds-Gve" kind="show" identifier="signInSegue" id="Lfn-lY-PQU"/>
+                                    <segue destination="29i-bd-tWI" kind="show" identifier="signInSegue" id="6wT-Gf-f8F"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have account? Click here to sign up?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1t-SX-SVH">
@@ -392,8 +392,8 @@
         <image name="square-individual-nine-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZUN-M1-hcv"/>
         <segue reference="wQ3-Ce-js4"/>
-        <segue reference="Lfn-lY-PQU"/>
+        <segue reference="ZUN-M1-hcv"/>
+        <segue reference="r9y-uU-UCc"/>
     </inferredMetricsTieBreakers>
 </document>
