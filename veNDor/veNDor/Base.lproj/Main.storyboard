@@ -46,7 +46,7 @@
         <!--Upload-->
         <scene sceneID="2K8-cK-6SA">
             <objects>
-                <viewController id="QwS-nj-qel" sceneMemberID="viewController">
+                <viewController id="QwS-nj-qel" customClass="ImageViewController" customModule="veNDor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVJ-Rf-1iP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,8 +96,8 @@
                                     <action selector="categorytxt:" destination="ma0-NM-Jt2" eventType="editingDidEnd" id="gTi-b0-IGh"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFi-Ju-AQ8">
-                                <rect key="frame" x="67" y="94" width="240" height="173"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-oO-bWf">
+                                <rect key="frame" x="67" y="68" width="240" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -105,6 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="LM4-EH-rO4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="box-outgoing-7" selectedImage="box-outgoing-7" id="UlH-yA-7M3"/>
+                    <connections>
+                        <outlet property="imagepicker" destination="Seu-oO-bWf" id="7KM-uL-HrE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3k-1f-r5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ma0-NM-Jt2" userLabel="Exit" sceneMemberID="exit"/>
@@ -463,6 +466,6 @@
         <image name="square-individual-nine-7" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KsL-Wj-IjY"/>
+        <segue reference="ZUN-M1-hcv"/>
     </inferredMetricsTieBreakers>
 </document>
