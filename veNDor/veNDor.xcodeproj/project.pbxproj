@@ -36,6 +36,7 @@
 		98BED4A5207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
 		DB04CD070E125CDD37B965B2 /* Pods_veNDorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */; };
 		E6A60FC12082932B00414786 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A60FC02082932B00414786 /* ImageViewController.swift */; };
+		E6A60FC32082AFE600414786 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A60FC22082AFE600414786 /* PostData.swift */; };
 		EF2F9F252EA93073200295A7 /* Pods_veNDor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB093322B2F8843DF379FD5 /* Pods_veNDor.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		98BED4A2207AF2F70005D7AE /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A60FC02082932B00414786 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		E6A60FC22082AFE600414786 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				98588102207B09F500D7CDF7 /* DataService.swift */,
 				98BED49A207AE7090005D7AE /* SignOutViewController.swift */,
 				E6A60FC02082932B00414786 /* ImageViewController.swift */,
+				E6A60FC22082AFE600414786 /* PostData.swift */,
 				982DBFF92075240500959356 /* Main.storyboard */,
 				982DBFFF2075240500959356 /* Assets.xcassets */,
 				982DC0012075240600959356 /* LaunchScreen.storyboard */,
@@ -518,6 +521,7 @@
 				98588103207B09F600D7CDF7 /* DataService.swift in Sources */,
 				98BED49B207AE7090005D7AE /* SignOutViewController.swift in Sources */,
 				983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */,
+				E6A60FC32082AFE600414786 /* PostData.swift in Sources */,
 				98BED49F207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */,
 				982DBFF62075240500959356 /* AppDelegate.swift in Sources */,
