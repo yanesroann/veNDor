@@ -21,11 +21,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var confirmPasswordField: UITextField!
     var userUID: String!
     
-    override func viewDidAppear(_ animated: Bool) {
-        if let _ = KeychainWrapper.standard.string(forKey: "uid") {
-            performSegue(withIdentifier: "signInSegue", sender: nil)
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        if let _ = KeychainWrapper.standard.string(forKey: "uid") {
+//            performSegue(withIdentifier: "signInSegue", sender: nil)
+//        }
+//    }
     
     func setUser() {
         let userData = [

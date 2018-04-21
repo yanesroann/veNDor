@@ -1,186 +1,83 @@
 //
 //  ChatViewController.swift
-//  veNDorStarterApp
+//  veNDor
 //
-//  Created by Roann Yanes on 2/23/18.
-//  Copyright © 2018 Roann Yanes. All rights reserved.
+//  Created by Roann Yanes on 4/15/18.
+//  Copyright © 2018 veNDor Team. All rights reserved.
 //
 
 import UIKit
 import Firebase
 import FirebaseDatabase
-import JSQMessagesViewController
-import KeychainSwift
+import SwiftKeychainWrapper
+import FirebaseAuth
 
-class ChatViewController: JSQMessagesViewController {
 
-    var messages = [JSQMessage]()
-    
-    // lazy property allows the bubbles to only be created once to save resources
-    // sets the color of the outgoing messages bubble
-    lazy var outgoingBubble: JSQMessagesBubbleImage = {
-        return JSQMessagesBubbleImageFactory()!.outgoingMessagesBubbleImage(with: UIColor(red: 118/255, green: 203/255, blue: 226/255, alpha: 1.0))
-    } ()
-    
-    // sets the color of the incoming messages bubble
-    lazy var incomingBubble: JSQMessagesBubbleImage = {
-        return JSQMessagesBubbleImageFactory()!.incomingMessagesBubbleImage(with: UIColor(red: 182/255, green: 189/255, blue: 189/255, alpha: 1.0))
-    } ()
+
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+
+    @IBOutlet weak var tableView: UITableView!
+    var messageDetail = [MessageDetail]()
+    var detail: MessageDetail!
+    var currentUser = KeychainWrapper.standard.string(forKey: "uid")
+    var recipient: String!
+    var messageID: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        let defaults = UserDefaults.standard
-        let keyChain = DataService().keyChain
-        
-        if  let id = keyChain.get("uid"), // defaults.string(forKey: "jsq_id"),
-            let name = defaults.string(forKey: "jsq_name")
-        {
-            senderId = id
-            senderDisplayName = name
-        }
-        else
-        {
-            senderId = String(arc4random_uniform(999999)) // assigns user an ID number
-            senderDisplayName = ""
-            
-            defaults.set(senderId, forKey: "jsq_id")
-            defaults.synchronize()
-            
-            showDisplayNameDialog()
-        }
-        
-        title = "\(senderDisplayName!)"
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showDisplayNameDialog))
-        tapGesture.numberOfTapsRequired = 1
-        
-        navigationController?.navigationBar.addGestureRecognizer(tapGesture)
-        
-        
-        // hides the message bubbles (while the user is typing)
-        inputToolbar.contentView.leftBarButtonItem = nil
-        collectionView.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
-        collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
-        
-        // queries the database for the chat messages
-        // retrieves the last 10 chat messages
-        let query = Constants.refs.databaseChats.queryLimited(toLast: 10)
-        
-        // this is where the data is retrieved from the database
-        _ = query.observe(.childAdded, with: { [weak self] snapshot in
-            
-            if  let data        = snapshot.value as? [String: String],
-                let id          = data["sender_id"],
-                let name        = data["name"],
-                let text        = data["text"],
-                !text.isEmpty // checks if the messages exist and prevents empty messages from appearing to the user
-            {
-                // a new JSQMessage object is created
-                if let message = JSQMessage(senderId: id, displayName: name, text: text)
-                {
-                    self?.messages.append(message)
-                    
-                    self?.finishReceivingMessage()
+        Database.database().reference().child("users").child(currentUser!).child("messages").observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                self.messageDetail.removeAll()
+                for data in snapshot {
+                    if let messageDict = data.value as? Dictionary<String, AnyObject> {
+                        let key = data.key
+                        let info = MessageDetail(messageKey: key, messageData: messageDict)
+                        self.messageDetail.append(info)
+                    }
                 }
             }
+            self.tableView.reloadData()
         })
-
-    }
-    
-    @objc func showDisplayNameDialog()
-    {
-        let defaults = UserDefaults.standard
-        
-        let alert = UIAlertController(title: "Your Display Name", message: "Before you can chat, please choose a display name. Others will see this name when you send chat messages. You can change your display name again by tapping the navigation bar.", preferredStyle: .alert)
-        
-        alert.addTextField { textField in
-            
-            if let name = defaults.string(forKey: "jsq_name")
-            {
-                textField.text = name
-            }
-            else
-            {
-                let names = ["Ford", "Arthur", "Zaphod", "Trillian", "Slartibartfast", "Humma Kavula", "Deep Thought"]
-                textField.text = names[Int(arc4random_uniform(UInt32(names.count)))]
-            }
-        }
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self, weak alert] _ in
-            
-            if let textField = alert?.textFields?[0], !textField.text!.isEmpty {
-                
-                self?.senderDisplayName = textField.text
-                
-                self?.title = "\(self!.senderDisplayName!)"
-                
-                defaults.set(textField.text, forKey: "jsq_name")
-                defaults.synchronize()
-            }
-        }))
-        
-        present(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func reloadMessagesView() {
-        self.collectionView?.reloadData()
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    // returns an item from the message array based on an index
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section:Int) -> Int
     {
-        return messages[indexPath.item]
+        return messageDetail.count
     }
     
-    // returns the number of messages in the message array
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        return messages.count
+        let messageDet = messageDetail[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? messageDetailCell {
+            cell.configureCell(messageDetail: messageDet)
+            return cell
+        } else {
+            return messageDetailCell()
+        }
     }
     
-    // returns the correct bubble depending on which user sent what message
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource!
-    {
-        return messages[indexPath.item].senderId == senderId ? outgoingBubble : incomingBubble
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        recipient = messageDetail[indexPath.row].recipient
+        messageID = messageDetail[indexPath.row].messageRef.key
+        performSegue(withIdentifier: "toMessages", sender: nil)
     }
     
-    // hides the message bubbles
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource!
-    {
-        return nil
-    }
-    
-    // sets the name label of the user who sent the message on top of the chat bubble
-    // called when the name label is needed
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAt indexPath: IndexPath!) -> NSAttributedString!
-    {
-        // determines the user who sent the chat
-        return messages[indexPath.item].senderId == senderId ? nil : NSAttributedString(string:
-            // accesses message by index
-            messages[indexPath.item].senderDisplayName)
-    }
-    
-    // height of the name label
-    override func collectionView(_ collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAt indexPath: IndexPath!) -> CGFloat
-    {
-        return messages[indexPath.item].senderId == senderId ? 0 : 15
-    }
-    
-    // overrides the "send" function to send data to the database when the user sends a message
-    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!)
-    {
-        let ref = Constants.refs.databaseChats.childByAutoId() // create a reference to a new value, in Firebase, on the chats node
-        
-        let message = ["sender_id": senderId, "name": senderDisplayName, "text": text] // dictionary information about user and message that was sent
-        
-        ref.setValue(message)
-        
-        finishSendingMessage() // tells the library the done setting message information
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? MessageViewController {
+            destinationViewController.recipient = recipient
+            destinationViewController.messageID = messageID
+        }
     }
 }

@@ -9,16 +9,17 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import SwiftKeychainWrapper
 
 class SignOutViewController: UIViewController {
-
     @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         guard let fullName = Auth.auth().currentUser?.displayName else { return }
-        label.text = "Hello \(fullName)"
+        label.text = "Hello, \(fullName)!"
     }
 
     @IBAction func onSignOutPressed(_ sender: Any) {
@@ -28,7 +29,7 @@ class SignOutViewController: UIViewController {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-        //DataService().keyChain.delete("uid")
+        //KeychainWrapper.standard.removeObject(forKey: "key")
         //dismiss(animated: true, completion: nil)
         
     }
