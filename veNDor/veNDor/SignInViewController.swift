@@ -44,6 +44,13 @@ class SignInViewController: UIViewController {
                 }
             }
         }
+ //       if segue.identifier == "resetSegue" {
+  //          if let destination = segue.destination as? PasswordResetViewController {
+ //               if self.emailField.text != nil {
+ //                   destination.emailField = emailField
+ //               }
+  //          }
+  //      }
         
 //        if segue.identifier == "signInSegue" {
 //            if let destination = segue.destination as? SignOutViewController {
@@ -92,6 +99,7 @@ class SignInViewController: UIViewController {
             print(user.uid)
         })
     }
+
 }
 
 
