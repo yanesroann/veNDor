@@ -12,8 +12,8 @@ target 'veNDor' do
   pod 'Firebase/Database'
   pod 'JSQMessagesViewController'
   pod 'KeychainSwift'
+  pod 'SwiftyJSON'
   pod 'SwiftKeychainWrapper'
-  pod 'SwiftyJson'
   
   target 'veNDorTests' do
     inherit! :search_paths

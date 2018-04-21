@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8BFE023DA1AADEAAED03A4C8 /* Pods_veNDorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */; };
+		980757EE208A0F1900989BA5 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980757ED208A0F1900989BA5 /* MessageDetail.swift */; };
 		982DBFF62075240500959356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982DBFF52075240500959356 /* AppDelegate.swift */; };
 		982DBFFB2075240500959356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 982DBFF92075240500959356 /* Main.storyboard */; };
 		982DBFFE2075240500959356 /* veNDor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 982DBFFC2075240500959356 /* veNDor.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 		982DC027207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
 		982DC028207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
 		982DC029207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
+		983B457C208AB4F200CBE96A /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B457B208AB4F200CBE96A /* MessageViewController.swift */; };
 		983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
 		983E772C207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
 		983E772D207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
@@ -25,6 +27,12 @@
 		98588104207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
 		98588105207B09F600D7CDF7 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98588102207B09F500D7CDF7 /* DataService.swift */; };
 		98727A01207B0CEE003541A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98727A00207B0CED003541A9 /* Constants.swift */; };
+		98883BAE2083931A00E65A01 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98883BAD2083931A00E65A01 /* ChatViewController.swift */; };
+		98883BAF2083931A00E65A01 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98883BAD2083931A00E65A01 /* ChatViewController.swift */; };
+		98883BB02083931A00E65A01 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98883BAD2083931A00E65A01 /* ChatViewController.swift */; };
+		98883BB22087971C00E65A01 /* messageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98883BB12087971C00E65A01 /* messageDetailCell.swift */; };
+		98883BB32087971C00E65A01 /* messageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98883BB12087971C00E65A01 /* messageDetailCell.swift */; };
+		98883BB42087971C00E65A01 /* messageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98883BB12087971C00E65A01 /* messageDetailCell.swift */; };
 		98BED49B207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
 		98BED49C207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
 		98BED49D207AE7090005D7AE /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED49A207AE7090005D7AE /* SignOutViewController.swift */; };
@@ -34,6 +42,8 @@
 		98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
 		98BED4A4207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
 		98BED4A5207AF2F70005D7AE /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BED4A2207AF2F70005D7AE /* AlertController.swift */; };
+		98F7E3C6208B7C0900141F8F /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7E3C5208B7C0900141F8F /* MessagesCell.swift */; };
+		98F7E3C8208B7C7100141F8F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7E3C7208B7C7100141F8F /* Message.swift */; };
 		DB04CD070E125CDD37B965B2 /* Pods_veNDorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */; };
 		E6A60FC12082932B00414786 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A60FC02082932B00414786 /* ImageViewController.swift */; };
 		E6A60FC32082AFE600414786 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A60FC22082AFE600414786 /* PostData.swift */; };
@@ -66,6 +76,7 @@
 		4CB093322B2F8843DF379FD5 /* Pods_veNDor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA24F40C88DBE0CF3C2EF2C /* Pods-veNDorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDorUITests/Pods-veNDorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83292319A5B41D2BA08802C3 /* Pods-veNDorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDorTests/Pods-veNDorTests.release.xcconfig"; sourceTree = "<group>"; };
+		980757ED208A0F1900989BA5 /* MessageDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetail.swift; sourceTree = "<group>"; };
 		982DBFF22075240500959356 /* veNDor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = veNDor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		982DBFF52075240500959356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		982DBFFA2075240500959356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,13 +91,18 @@
 		982DC0182075240600959356 /* veNDorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = veNDorUITests.swift; sourceTree = "<group>"; };
 		982DC01A2075240600959356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		982DC026207524BF00959356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		983B457B208AB4F200CBE96A /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		983E772A207986DA00AB1425 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		98588102207B09F500D7CDF7 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		98727A00207B0CED003541A9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		98727A12207BDC37003541A9 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		98883BAD2083931A00E65A01 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		98883BB12087971C00E65A01 /* messageDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageDetailCell.swift; sourceTree = "<group>"; };
 		98BED49A207AE7090005D7AE /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		98BED49E207AE81A0005D7AE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		98BED4A2207AF2F70005D7AE /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		98F7E3C5208B7C0900141F8F /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
+		98F7E3C7208B7C7100141F8F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A75839CB985789E7C61D2C44 /* Pods_veNDorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A60FC02082932B00414786 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		E6A60FC22082AFE600414786 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
@@ -149,6 +165,12 @@
 			children = (
 				982DBFF52075240500959356 /* AppDelegate.swift */,
 				983E772A207986DA00AB1425 /* SignUpViewController.swift */,
+				983B457B208AB4F200CBE96A /* MessageViewController.swift */,
+				98F7E3C5208B7C0900141F8F /* MessagesCell.swift */,
+				98F7E3C7208B7C7100141F8F /* Message.swift */,
+				98883BAD2083931A00E65A01 /* ChatViewController.swift */,
+				980757ED208A0F1900989BA5 /* MessageDetail.swift */,
+				98883BB12087971C00E65A01 /* messageDetailCell.swift */,
 				98BED4A2207AF2F70005D7AE /* AlertController.swift */,
 				98BED49E207AE81A0005D7AE /* SignInViewController.swift */,
 				98588102207B09F500D7CDF7 /* DataService.swift */,
@@ -424,6 +446,7 @@
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -435,6 +458,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -518,12 +542,18 @@
 			files = (
 				982DBFFE2075240500959356 /* veNDor.xcdatamodeld in Sources */,
 				E6A60FC12082932B00414786 /* ImageViewController.swift in Sources */,
+				980757EE208A0F1900989BA5 /* MessageDetail.swift in Sources */,
+				98883BB22087971C00E65A01 /* messageDetailCell.swift in Sources */,
+				98F7E3C6208B7C0900141F8F /* MessagesCell.swift in Sources */,
+				98883BAE2083931A00E65A01 /* ChatViewController.swift in Sources */,
 				98588103207B09F600D7CDF7 /* DataService.swift in Sources */,
+				983B457C208AB4F200CBE96A /* MessageViewController.swift in Sources */,
 				98BED49B207AE7090005D7AE /* SignOutViewController.swift in Sources */,
 				983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */,
 				E6A60FC32082AFE600414786 /* PostData.swift in Sources */,
 				98BED49F207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */,
+				98F7E3C8208B7C7100141F8F /* Message.swift in Sources */,
 				982DBFF62075240500959356 /* AppDelegate.swift in Sources */,
 				98727A01207B0CEE003541A9 /* Constants.swift in Sources */,
 			);
@@ -535,7 +565,9 @@
 			files = (
 				98BED4A0207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A4207AF2F70005D7AE /* AlertController.swift in Sources */,
+				98883BB32087971C00E65A01 /* messageDetailCell.swift in Sources */,
 				983E772C207986DA00AB1425 /* SignUpViewController.swift in Sources */,
+				98883BAF2083931A00E65A01 /* ChatViewController.swift in Sources */,
 				98588104207B09F600D7CDF7 /* DataService.swift in Sources */,
 				98BED49C207AE7090005D7AE /* SignOutViewController.swift in Sources */,
 				982DC00E2075240600959356 /* veNDorTests.swift in Sources */,
@@ -548,7 +580,9 @@
 			files = (
 				98BED4A1207AE81A0005D7AE /* SignInViewController.swift in Sources */,
 				98BED4A5207AF2F70005D7AE /* AlertController.swift in Sources */,
+				98883BB42087971C00E65A01 /* messageDetailCell.swift in Sources */,
 				983E772D207986DA00AB1425 /* SignUpViewController.swift in Sources */,
+				98883BB02083931A00E65A01 /* ChatViewController.swift in Sources */,
 				98588105207B09F600D7CDF7 /* DataService.swift in Sources */,
 				98BED49D207AE7090005D7AE /* SignOutViewController.swift in Sources */,
 				982DC0192075240600959356 /* veNDorUITests.swift in Sources */,
