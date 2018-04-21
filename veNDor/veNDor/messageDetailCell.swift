@@ -16,7 +16,7 @@ import SwiftKeychainWrapper
 class messageDetailCell: UITableViewCell {
     
     @IBOutlet weak var recipientName: UILabel!
-    @IBOutlet weak var chatPeview: UILabel!
+    @IBOutlet weak var chatPreview: UILabel!
     
     var messageDetail: MessageDetail!
     var userPostKey: DatabaseReference!
