@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
-//Kimport SwiftyJSON
+import SwiftyJSON
 
 class Post {
     private var image: UIImage!
