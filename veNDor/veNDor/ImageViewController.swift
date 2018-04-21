@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -24,6 +25,11 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
             imagepicker.image = image
             dismiss(animated: true, completion: nil)
+       /* THE IMAGE STORAGE STUFF
+         if let imageData = UIImageJPEGRepresentation(image, 0.5) {
+            let storage = Storage.storage().reference().child("images")
+            storage.putData(imageData)
+        } */
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let controller = UIImagePickerController()
