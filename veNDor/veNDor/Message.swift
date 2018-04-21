@@ -38,6 +38,14 @@ class Message {
     }
     
     init(messageKey: String, postData: Dictionary<String, AnyObject>) {
+        _messageKey = messageKey
+        if let message = postData["message"] as? String {
+            _message = message
+        }
+        if let sender = postData["sender"] as? String {
+            _sender = sender
+        }
         
+        _messageRef = Database.database().reference().child("messages").child(_messageKey)
     }
 }
