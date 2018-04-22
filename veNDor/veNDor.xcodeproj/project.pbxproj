@@ -20,6 +20,9 @@
 		982DC027207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
 		982DC028207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
 		982DC029207524BF00959356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 982DC026207524BF00959356 /* GoogleService-Info.plist */; };
+		98319748208C08E9003C5BCB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98319747208C08E9003C5BCB /* SearchViewController.swift */; };
+		9831974A208C0A65003C5BCB /* searchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98319749208C0A65003C5BCB /* searchCell.swift */; };
+		9831974C208C0B59003C5BCB /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831974B208C0B59003C5BCB /* Search.swift */; };
 		983B457C208AB4F200CBE96A /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B457B208AB4F200CBE96A /* MessageViewController.swift */; };
 		983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
 		983E772C207986DA00AB1425 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983E772A207986DA00AB1425 /* SignUpViewController.swift */; };
@@ -93,6 +96,9 @@
 		982DC0182075240600959356 /* veNDorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = veNDorUITests.swift; sourceTree = "<group>"; };
 		982DC01A2075240600959356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		982DC026207524BF00959356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		98319747208C08E9003C5BCB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		98319749208C0A65003C5BCB /* searchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchCell.swift; sourceTree = "<group>"; };
+		9831974B208C0B59003C5BCB /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		983B457B208AB4F200CBE96A /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		983E772A207986DA00AB1425 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		98588102207B09F500D7CDF7 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -177,15 +183,18 @@
 				98BED49E207AE81A0005D7AE /* SignInViewController.swift */,
 				158B1D3A208BAD340017097B /* PasswordResetViewController.swift */,
 				98588102207B09F500D7CDF7 /* DataService.swift */,
+				9831974B208C0B59003C5BCB /* Search.swift */,
 				98BED49A207AE7090005D7AE /* SignOutViewController.swift */,
 				E6A60FC02082932B00414786 /* ImageViewController.swift */,
 				E6A60FC22082AFE600414786 /* PostData.swift */,
 				982DBFF92075240500959356 /* Main.storyboard */,
+				98319749208C0A65003C5BCB /* searchCell.swift */,
 				982DBFFF2075240500959356 /* Assets.xcassets */,
 				982DC0012075240600959356 /* LaunchScreen.storyboard */,
 				982DC0042075240600959356 /* Info.plist */,
 				982DC026207524BF00959356 /* GoogleService-Info.plist */,
 				982DBFFC2075240500959356 /* veNDor.xcdatamodeld */,
+				98319747208C08E9003C5BCB /* SearchViewController.swift */,
 			);
 			path = veNDor;
 			sourceTree = "<group>";
@@ -546,6 +555,7 @@
 				982DBFFE2075240500959356 /* veNDor.xcdatamodeld in Sources */,
 				E6A60FC12082932B00414786 /* ImageViewController.swift in Sources */,
 				980757EE208A0F1900989BA5 /* MessageDetail.swift in Sources */,
+				9831974A208C0A65003C5BCB /* searchCell.swift in Sources */,
 				98883BB22087971C00E65A01 /* messageDetailCell.swift in Sources */,
 				98F7E3C6208B7C0900141F8F /* MessagesCell.swift in Sources */,
 				98883BAE2083931A00E65A01 /* ChatViewController.swift in Sources */,
@@ -555,9 +565,11 @@
 				983E772B207986DA00AB1425 /* SignUpViewController.swift in Sources */,
 				E6A60FC32082AFE600414786 /* PostData.swift in Sources */,
 				98BED49F207AE81A0005D7AE /* SignInViewController.swift in Sources */,
+				98319748208C08E9003C5BCB /* SearchViewController.swift in Sources */,
 				98BED4A3207AF2F70005D7AE /* AlertController.swift in Sources */,
 				98F7E3C8208B7C7100141F8F /* Message.swift in Sources */,
 				982DBFF62075240500959356 /* AppDelegate.swift in Sources */,
+				9831974C208C0B59003C5BCB /* Search.swift in Sources */,
 				158B1D3B208BAD340017097B /* PasswordResetViewController.swift in Sources */,
 				98727A01207B0CEE003541A9 /* Constants.swift in Sources */,
 			);

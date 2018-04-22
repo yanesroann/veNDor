@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
     
     func setUser() {
         let userData = [
-            "name": fullNameField!
+            "username": fullNameField!
         ]
         KeychainWrapper.standard.set(self.userUID, forKey: "uid")
         let location = Database.database().reference().child("users").child(userUID)
