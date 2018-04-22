@@ -69,6 +69,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="DisplayCatagory" destination="Gkb-1a-7kQ" id="vvG-I2-BT6"/>
+                                            <outlet property="DisplayDescription" destination="PjW-TQ-c8P" id="AzP-sO-z2U"/>
+                                            <outlet property="DisplayPhoto" destination="8Tv-tc-0iP" id="USo-kB-aMM"/>
+                                            <outlet property="DisplayPrice" destination="74X-a2-SE3" id="ZqZ-9u-I9x"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
