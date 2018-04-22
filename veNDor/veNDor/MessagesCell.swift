@@ -31,5 +31,20 @@ class MessagesCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configCell(message: Message) {
+        self.message = message
+        if message.sender == currentUser {
+            sentMessageView.isHidden = false
+            sentMessageLabel.text = message.message
+            receivedMessageLabel.text = ""
+            receivedMessageLabel.isHidden = true
+        } else {
+            sentMessageView.isHidden = true
+            sentMessageLabel.text = ""
+            receivedMessageLabel.text = message.message
+            receivedMessageLabel.isHidden = false
+        }
+    }
 
 }
