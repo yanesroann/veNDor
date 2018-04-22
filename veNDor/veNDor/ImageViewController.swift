@@ -14,6 +14,8 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var imagepicker: UIImageView!
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
+    @IBAction func UploadPressed(_ sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
