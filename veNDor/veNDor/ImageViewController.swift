@@ -15,11 +15,13 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
+    
     var textViewPlaceholderText = "Describe your item here"
     
     @IBAction func UploadPressed(_ sender: UIButton) {
         if ItemDescription.text != textViewPlaceholderText && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
-            let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!)
+            let PriceInt:Int? = Int(ItemPrice.text!)
+            let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!, catagory: ItemCatagory.text!, price: PriceInt!)
             //newPost.save()
             self.dismiss(animated: true, completion: nil)
         }

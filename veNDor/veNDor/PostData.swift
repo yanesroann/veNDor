@@ -14,13 +14,16 @@ import SwiftyJSON
 class Post {
     private var image: UIImage!
     var caption: String!
+    var catagory: String!
     //var downloadURL: String?
-    var price: String!
+    var price: Int?
     
     
-    init(image: UIImage, caption: String) {
+    init(image: UIImage, caption: String, catagory:String, price:Int) {
         self.image = image
         self.caption = caption
+        self.caption = catagory
+        self.price = price
     }
     
     /* init(snapshot: DataSnapshot) {
@@ -33,15 +36,14 @@ class Post {
         let newPostRef = Database.database().reference().child("posts").childByAutoId()
         let newPostKey = newPostRef.key
         
-        // 1. save image
         if let imageData = UIImageJPEGRepresentation(image, 0.5) {
             let storage = Storage.storage().reference().child("images/\(newPostKey)")
             
             storage.putData(imageData).observe(.success, handler: { (snapshot) in
                 self.downloadURL = snapshot.metadata?.downloadURL()?.absoluteString
                 let postDictionary = [
-                    "imageDownloadURL" : self.downloadURL,
                     "caption" : self.caption
+                    "price" :
                 ]
                 newPostRef.setValue(postDictionary)
             })
