@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		158B1D3B208BAD340017097B /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B1D3A208BAD340017097B /* PasswordResetViewController.swift */; };
+		158B1D3D208C35A00017097B /* GrapeDemo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 158B1D3C208C35A00017097B /* GrapeDemo-Regular.ttf */; };
 		8BFE023DA1AADEAAED03A4C8 /* Pods_veNDorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */; };
 		980757EE208A0F1900989BA5 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980757ED208A0F1900989BA5 /* MessageDetail.swift */; };
 		982DBFF62075240500959356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982DBFF52075240500959356 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		158B1D3A208BAD340017097B /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		158B1D3C208C35A00017097B /* GrapeDemo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GrapeDemo-Regular.ttf"; path = "../../../../Downloads/grape/GrapeDemo-Regular.ttf"; sourceTree = "<group>"; };
 		1B602E1A64DD9D49F9F17F47 /* Pods-veNDor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDor.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDor/Pods-veNDor.release.xcconfig"; sourceTree = "<group>"; };
 		38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C575A14E707A5D622D9111 /* Pods-veNDor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veNDor/Pods-veNDor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				98319749208C0A65003C5BCB /* searchCell.swift */,
 				982DBFFF2075240500959356 /* Assets.xcassets */,
 				982DC0012075240600959356 /* LaunchScreen.storyboard */,
+				158B1D3C208C35A00017097B /* GrapeDemo-Regular.ttf */,
 				982DC0042075240600959356 /* Info.plist */,
 				982DC026207524BF00959356 /* GoogleService-Info.plist */,
 				982DBFFC2075240500959356 /* veNDor.xcdatamodeld */,
@@ -360,6 +363,7 @@
 				982DC027207524BF00959356 /* GoogleService-Info.plist in Resources */,
 				982DC0002075240500959356 /* Assets.xcassets in Resources */,
 				982DBFFB2075240500959356 /* Main.storyboard in Resources */,
+				158B1D3D208C35A00017097B /* GrapeDemo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
