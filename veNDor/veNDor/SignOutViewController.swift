@@ -12,16 +12,18 @@ import FirebaseAuth
 import SwiftKeychainWrapper
 
 class SignOutViewController: UIViewController {
-    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var namelabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         guard let fullName = Auth.auth().currentUser?.displayName else { return }
-        label.text = "Hello, \(fullName)!"
+        namelabel.text = "Hello, \(fullName)!"
     }
 
+    
     @IBAction func onSignOutPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
