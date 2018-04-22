@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PhotoTableViewCell: UITableViewCell {
 
@@ -15,6 +16,15 @@ class PhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var DisplayPrice: UILabel!
     @IBOutlet weak var DisplayCatagory: UILabel!
     
+    var post: Post! {
+        didSet {
+            self.updateUI()
+        }
+    }
+    func updateUI(){
+        self.DisplayDescription.text = post.caption
+        self.DisplayPrice.text = post.caption
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
