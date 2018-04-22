@@ -27,15 +27,16 @@ class SignUpViewController: UIViewController {
 //        }
 //    }
     
-    func setUser() {
-        let userData = [
-            "username": fullNameField!
-        ]
-        KeychainWrapper.standard.set(self.userUID, forKey: "uid")
-        let location = Database.database().reference().child("users").child(userUID)
-        location.setValue(userData)
-        dismiss(animated: true, completion: nil)
-    }
+//    func setUser() {
+//        let userData: Dictionary<String, Any> = [
+//            "username": fullNameField!,
+//            "email": emailField!
+//        ]
+//        KeychainWrapper.standard.set(self.userUID, forKey: "uid")
+//        let location = Database.database().reference().child("users").child(userUID)
+//        location.setValue(userData)
+//        //dismiss(animated: true, completion: nil)
+//    }
 
     @IBAction func onSignUpPressed(_ sender: Any) {
         guard let fullName = fullNameField.text, fullName != "",
@@ -53,11 +54,19 @@ class SignUpViewController: UIViewController {
                 }
                 if let user = user {
                     self.userUID = user.uid
+                    let userData: Dictionary<String, Any> = [
+                        "username": fullName,
+                        "email": email
+                    ]
+                    KeychainWrapper.standard.set(self.userUID, forKey: "uid")
+                    let location = Database.database().reference().child("users").child(self.userUID)
+                    location.setValue(userData)
                 }
                 guard let user = user else { return }
                 print(user.email ?? "Missing Email")
                 print(user.uid)
-
+                
+   
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
             })
         }
