@@ -22,7 +22,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         if ItemDescription.text != textViewPlaceholderText && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
             let PriceInt:Int? = Int(ItemPrice.text!)
             let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!, catagory: ItemCatagory.text!, price: PriceInt!)
-            //newPost.save()
+            newPost.save()
             self.dismiss(animated: true, completion: nil)
         }
     }
