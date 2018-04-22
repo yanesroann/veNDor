@@ -44,7 +44,7 @@ class Post {
                     "caption" : self.caption,
                     "catagory" : self.catagory,
                     "price" : self.price!
-                    ] as! DataSnapshot
+                    ] as [String : Any]
                 
                 newPostRef.setValue(postDictionary)
             })
