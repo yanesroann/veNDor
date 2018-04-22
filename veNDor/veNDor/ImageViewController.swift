@@ -15,18 +15,23 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
-
+    var textViewPlaceholderText = "Describe your item here"
+    
     @IBAction func UploadPressed(_ sender: UIButton) {
+        if ItemDescription.text != textViewPlaceholderText && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
+            let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!)
+            //newPost.save()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
-    var textViewPlaceholderText = "Describe your item here"
     override func viewDidLoad() {
         super.viewDidLoad()
         ItemDescription.text = textViewPlaceholderText
         ItemDescription.textColor = .lightGray
         //ItemDescription.delegate = self as! UITextFieldDelegate
     }
-    
+
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
@@ -46,16 +51,4 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         controller.sourceType = .photoLibrary
         present(controller, animated:true, completion:nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

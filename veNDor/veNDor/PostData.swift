@@ -15,7 +15,7 @@ class Post {
     private var image: UIImage!
     var caption: String!
     //var downloadURL: String?
-    var price: Int?
+    var price: String!
     
     
     init(image: UIImage, caption: String) {
@@ -28,7 +28,7 @@ class Post {
         self.caption = json["caption"].stringValue
         self.downloadURL = json["imageDownloadURL"].string
     }
-    
+
     func save() {
         let newPostRef = Database.database().reference().child("posts").childByAutoId()
         let newPostKey = newPostRef.key
