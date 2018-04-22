@@ -13,15 +13,16 @@ import SwiftKeychainWrapper
 
 class SignOutViewController: UIViewController {
     
-    @IBOutlet weak var namelabel: UILabel!
-    
+//    @IBOutlet weak var namelabel: UILabel!
+//
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        guard let fullName = Auth.auth().currentUser?.displayName else { return }
-        namelabel.text = "Hello, \(fullName)!"
+        
+            super.viewDidLoad()
     }
+//        // Do any additional setup after loading the view.
+//        guard let fullName = Auth.auth().currentUser?.displayName else { return }
+//        namelabel.text = "Hello, \(fullName)!"
+//    }
 
     
     @IBAction func onSignOutPressed(_ sender: Any) {
