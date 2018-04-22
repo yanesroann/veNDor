@@ -326,6 +326,13 @@
                                     <constraint firstAttribute="height" constant="41" id="7d3-49-eGh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62I-cZ-7Yd">
+                                <rect key="frame" x="106" y="323" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -337,6 +344,9 @@
                         <viewLayoutGuide key="safeArea" id="QtD-KO-y9c"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Account" image="circle-user-7" selectedImage="circle-user-7" id="Kcx-Ls-0pg"/>
+                    <connections>
+                        <outlet property="name" destination="62I-cZ-7Yd" id="MxI-4j-ZFE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eda-CZ-89z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
