@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -152,10 +153,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bF-vx-JUd">
-                                                    <rect key="frame" x="8" y="0.0" width="88" height="77"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bF-vx-JUd">
+                                                    <rect key="frame" x="8" y="0.0" width="59" height="77"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkC-UQ-mbH">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkC-UQ-mbH">
                                                             <rect key="frame" x="8" y="8" width="42" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -170,11 +171,11 @@
                                                         <constraint firstAttribute="bottom" secondItem="LkC-UQ-mbH" secondAttribute="bottom" constant="8" id="vY6-UQ-1n8"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBR-AU-i4b">
-                                                    <rect key="frame" x="272" y="0.0" width="88" height="76.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBR-AU-i4b">
+                                                    <rect key="frame" x="308" y="0.0" width="59" height="76.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-2d-3k2">
-                                                            <rect key="frame" x="8" y="8" width="42" height="60.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-2d-3k2">
+                                                            <rect key="frame" x="8" y="8" width="43" height="60.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -536,29 +537,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up Successful!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da7-ph-FNu">
-                                <rect key="frame" x="110" y="270" width="154" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqc-K8-TBF">
-                                <rect key="frame" x="132" y="330" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqc-K8-TBF">
+                                <rect key="frame" x="122" y="304" width="131" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Continue to app"/>
                                 <connections>
                                     <segue destination="29i-bd-tWI" kind="show" id="KsL-Wj-IjY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IH-kO-h08">
+                                <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.34901960780000002" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="xvi-j8-8BZ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up Successful!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da7-ph-FNu">
+                                <rect key="frame" x="118" y="261" width="138" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.76544583070000005" green="1" blue="0.97072480729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0IH-kO-h08" firstAttribute="top" secondItem="h2H-68-8Ja" secondAttribute="top" id="AF4-ca-CvW"/>
+                            <constraint firstItem="Pqc-K8-TBF" firstAttribute="top" secondItem="da7-ph-FNu" secondAttribute="bottom" constant="25" id="W0G-NO-oE5"/>
+                            <constraint firstItem="0IH-kO-h08" firstAttribute="leading" secondItem="h2H-68-8Ja" secondAttribute="leading" id="XnN-1m-1Aj"/>
+                            <constraint firstItem="da7-ph-FNu" firstAttribute="top" secondItem="0IH-kO-h08" secondAttribute="bottom" constant="200" id="aeq-km-Pt9"/>
+                            <constraint firstItem="Pqc-K8-TBF" firstAttribute="leading" secondItem="h2H-68-8Ja" secondAttribute="leading" constant="122" id="hs0-fy-KnF"/>
+                            <constraint firstItem="h2H-68-8Ja" firstAttribute="trailing" secondItem="Pqc-K8-TBF" secondAttribute="trailing" constant="122" id="jKM-O3-iXG"/>
+                            <constraint firstItem="h2H-68-8Ja" firstAttribute="trailing" secondItem="da7-ph-FNu" secondAttribute="trailing" constant="119" id="vD1-7f-BiC"/>
+                            <constraint firstItem="h2H-68-8Ja" firstAttribute="trailing" secondItem="0IH-kO-h08" secondAttribute="trailing" id="xaG-8f-YEm"/>
+                            <constraint firstItem="da7-ph-FNu" firstAttribute="leading" secondItem="h2H-68-8Ja" secondAttribute="leading" constant="118" id="xaa-Lo-jqw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h2H-68-8Ja"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpi-co-fdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1423" y="-1427"/>
+            <point key="canvasLocation" x="-1423.2" y="-1427.136431784108"/>
         </scene>
         <!--SignIn-->
         <scene sceneID="bnB-YY-ogZ">
@@ -754,6 +772,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="X00-sU-N7T"/>
-        <segue reference="ZUN-M1-hcv"/>
+        <segue reference="KsL-Wj-IjY"/>
     </inferredMetricsTieBreakers>
 </document>
