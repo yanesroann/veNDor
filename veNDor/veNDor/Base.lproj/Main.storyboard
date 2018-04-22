@@ -408,6 +408,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="box-outgoing-7" selectedImage="box-outgoing-7" id="UlH-yA-7M3"/>
                     <connections>
+                        <outlet property="ItemCatagory" destination="b1e-Yw-uxJ" id="21j-LN-ynf"/>
                         <outlet property="ItemDescription" destination="rns-kF-fqs" id="MfT-N1-e6W"/>
                         <outlet property="ItemPrice" destination="sED-Sy-mMZ" id="Msd-Jh-IbP"/>
                         <outlet property="imagepicker" destination="Seu-oO-bWf" id="7KM-uL-HrE"/>

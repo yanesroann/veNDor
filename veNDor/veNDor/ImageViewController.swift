@@ -13,13 +13,18 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var imagepicker: UIImageView!
     @IBOutlet weak var ItemDescription: UITextField!
+    @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
+
     @IBAction func UploadPressed(_ sender: UIButton) {
     }
+    
+    var textViewPlaceholderText = "Describe your item here"
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ItemDescription.text = textViewPlaceholderText
+        ItemDescription.textColor = .lightGray
+        //ItemDescription.delegate = self as! UITextFieldDelegate
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
