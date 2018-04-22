@@ -34,7 +34,7 @@ class PasswordResetViewController: UIViewController {
                 AlertController.showAlert(self, title: "Error while signing in!", message: "Please enter valid email.")
                 return
         }
-        Auth.auth().sendPasswordReset(withEmail: "klutz1@nd.edu") { (error) in
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error != nil {
                 AlertController.showAlert(self, title: "Password Reset!", message: "Password reset failed to send: \(error!.localizedDescription)")
             }
