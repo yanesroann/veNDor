@@ -12,6 +12,8 @@ import Firebase
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imagepicker: UIImageView!
+    @IBOutlet weak var ItemDescription: UITextField!
+    @IBOutlet weak var ItemPrice: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 

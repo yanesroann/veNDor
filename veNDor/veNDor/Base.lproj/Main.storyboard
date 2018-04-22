@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKe-Yb-s29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.600000000000001" y="384.55772113943033"/>
+            <point key="canvasLocation" x="948" y="-479"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="PoY-d6-YLf">
@@ -399,13 +399,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="box-outgoing-7" selectedImage="box-outgoing-7" id="UlH-yA-7M3"/>
                     <connections>
+                        <outlet property="ItemDescription" destination="rns-kF-fqs" id="MfT-N1-e6W"/>
+                        <outlet property="ItemPrice" destination="sED-Sy-mMZ" id="Msd-Jh-IbP"/>
                         <outlet property="imagepicker" destination="Seu-oO-bWf" id="7KM-uL-HrE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3k-1f-r5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ma0-NM-Jt2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="1950.6746626686659"/>
+            <point key="canvasLocation" x="1668" y="-479"/>
         </scene>
         <!--My Account-->
         <scene sceneID="q28-jb-ddr">
@@ -941,7 +943,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Wn3-yr-C1S"/>
-        <segue reference="6wT-Gf-f8F"/>
+        <segue reference="ZUN-M1-hcv"/>
         <segue reference="hsW-cA-O4T"/>
     </inferredMetricsTieBreakers>
 </document>
