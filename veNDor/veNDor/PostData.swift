@@ -43,7 +43,7 @@ class Post {
             storage.putData(imageData).observe(.success, handler: { (snapshot) in
                 self.downloadURL = snapshot.metadata?.downloadURL()?.absoluteString
                 let postDictionary = [
-                    "imageDownloadURL" : self.downloadURL,
+                    "imageDownloadURL" : self.downloadURL as Any,
                     "caption" : self.caption,
                     "catagory" : self.catagory,
                     "price" : self.price!
