@@ -15,7 +15,7 @@ class Post {
     private var image: UIImage!
     var caption: String!
     var catagory: String!
-    //var downloadURL: String?
+    var downloadURL: String?
     var price: Int?
     
     
@@ -30,6 +30,7 @@ class Post {
         let json = JSON(snapshot.value)
         self.caption = json["caption"].stringValue
         self.catagory = json["catagory"].stringValue
+        self.downloadURL = json["imageDownloadURL"].stringValue
         self.price = json["price"].intValue
     }
 
@@ -40,7 +41,9 @@ class Post {
         if let imageData = UIImageJPEGRepresentation(image, 0.5) {
             let storage = Storage.storage().reference().child("images/\(newPostKey)")
             storage.putData(imageData).observe(.success, handler: { (snapshot) in
+                self.downloadURL = snapshot.metadata?.downloadURL()?.absoluteString
                 let postDictionary = [
+                    "imageDownloadURL" : self.downloadURL,
                     "caption" : self.caption,
                     "catagory" : self.catagory,
                     "price" : self.price!

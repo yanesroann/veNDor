@@ -7,9 +7,12 @@
 
 import UIKit
 import Firebase
+import SwiftyJSON
 
 class AllItemsFeedTableViewController: UITableViewController {
 
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // download posts

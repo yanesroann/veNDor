@@ -21,11 +21,14 @@ class PhotoTableViewCell: UITableViewCell {
             self.updateUI()
         }
     }
+    
     func updateUI(){
         self.DisplayDescription.text = post.caption
         self.DisplayPrice.text = post.caption
     }
-    override func awakeFromNib() {
+    
+}
+    /* override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -34,6 +37,4 @@ class PhotoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-
-}
+    } */
