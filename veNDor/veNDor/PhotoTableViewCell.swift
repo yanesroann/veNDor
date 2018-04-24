@@ -24,7 +24,25 @@ class PhotoTableViewCell: UITableViewCell {
     
     func updateUI(){
         self.DisplayDescription.text = post.caption
+        self.DisplayCatagory.text = post.caption
         self.DisplayPrice.text = post.caption
+        
+        if let imageDownloadURL = post.downloadURL {
+            let imageStorageRef = Storage.storage().reference(forURL: imageDownloadURL)
+            imageStorageRef.getData(maxSize: 2 * 1024 * 1024) { [weak self] (data, error) in
+                if let error = error {
+                    print("******** \(error)")
+                } else {
+                    if let imageData = data {
+                        let image = UIImage(data: imageData)
+                        DispatchQueue.main.async {
+                            self?.DisplayPhoto.image = image
+                        }
+                    }
+                }
+                
+            }
+        }
     }
     
 }
