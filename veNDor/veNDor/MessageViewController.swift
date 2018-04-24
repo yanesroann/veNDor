@@ -29,7 +29,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300
-        if messageID    != "" && messageID != nil {
+        if messageID != "" && messageID != nil {
             loadData()
         }
         
@@ -48,8 +48,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func keyboardWillShow(notify: NSNotification) {
         if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
             }
         }
     }
