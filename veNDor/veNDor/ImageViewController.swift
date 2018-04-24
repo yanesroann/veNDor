@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftyJSON
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 

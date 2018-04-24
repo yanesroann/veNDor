@@ -16,13 +16,15 @@ class AllItemsFeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // download posts
-        Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in
+        Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in //child added to database
             // snapshot is now a dictionary
             let newPost = Post(snapshot: snapshot)
+            self.posts.append(newPost)
             DispatchQueue.main.async {
-                self.posts.insert(newPost, at: 0)
+                self.tableView.reloadData()
+                /* self.posts.insert(newPost, at: 0)
                 let indexPath = IndexPath(row: 0, section: 0)
-                self.tableView.insertRows(at: [indexPath], with: .top)
+                self.tableView.insertRows(at: [indexPath], with: .top) */
             }
         }
     }
@@ -41,12 +43,12 @@ class AllItemsFeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoTableViewCell
-        let post = self.posts[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as! PhotoTableViewCell
+        //let post = self.posts[indexPath.row]
         
-        cell.post = post
+        //cell.post = post
         
         return cell
     }

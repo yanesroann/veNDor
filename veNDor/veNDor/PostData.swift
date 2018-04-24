@@ -30,7 +30,7 @@ class Post {
         let json = JSON(snapshot.value)
         self.caption = json["caption"].stringValue
         self.catagory = json["catagory"].stringValue
-        self.downloadURL = json["imageDownloadURL"].stringValue
+        self.downloadURL = json["downloadURL"].stringValue
         self.price = json["price"].intValue
     }
 
@@ -43,7 +43,7 @@ class Post {
             storage.putData(imageData).observe(.success, handler: { (snapshot) in
                 self.downloadURL = snapshot.metadata?.downloadURL()?.absoluteString
                 let postDictionary = [
-                    "imageDownloadURL" : self.downloadURL as Any,
+                    "downloadURL" : self.downloadURL as Any,
                     "caption" : self.caption,
                     "catagory" : self.catagory,
                     "price" : self.price!
