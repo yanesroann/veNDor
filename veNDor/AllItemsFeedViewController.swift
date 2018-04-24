@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftyJSON
 
 class AllItemsFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -15,9 +17,19 @@ class AllItemsFeedViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+            // download posts
+        Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in //child added to database
+             //snapshot is now a dictionary
+             let newPost = Post(snapshot: snapshot)
+               /* DispatchQueue.main.async {
+                self.posts.insert(newPost, at: 0)
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.tableView.insertRows(at: [indexPath], with: .top) */
+            }
+        }
 
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
