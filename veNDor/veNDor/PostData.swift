@@ -47,7 +47,7 @@ class Post {
                     "caption" : self.caption,
                     "catagory" : self.catagory,
                     "price" : self.price!
-                    ] //as [String : Any]
+                    ]
                 
                 newPostRef.setValue(postDictionary)
             })
