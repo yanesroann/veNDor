@@ -7,8 +7,12 @@
 
 import UIKit
 
-class AllItemsFeedViewController: UIViewController {
+class AllItemsFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var posts = [Post]()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +24,22 @@ class AllItemsFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as! PhotoTableViewCell
+        let post = self.posts[indexPath.row]
+        
+        cell.post = post
+        
+        return cell
+    }
 
     /*
     // MARK: - Navigation

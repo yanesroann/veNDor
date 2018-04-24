@@ -88,6 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="JlV-lh-awW"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="All Items" image="square-individual-nine-7" selectedImage="square-individual-nine-7" id="BRv-9G-bDY"/>
+                    <connections>
+                        <outlet property="tableView" destination="zja-83-FNa" id="QY9-S9-dPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKe-Yb-s29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
