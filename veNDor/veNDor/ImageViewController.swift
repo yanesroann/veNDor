@@ -24,7 +24,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
             let PriceInt:Int? = Int(ItemPrice.text!)
             let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!, catagory: ItemCatagory.text!, price: PriceInt!)
             newPost.save()
-            self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "GoToFeed", sender: nil)
         }
     }
     
