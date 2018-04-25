@@ -13,12 +13,25 @@ import SwiftKeychainWrapper
 
 class SignOutViewController: UIViewController {
     
+    
 //    @IBOutlet weak var namelabel: UILabel!
-//
-    override func viewDidLoad() {
-        
-            super.viewDidLoad()
+    
+    let user = Auth.auth().currentUser
+    if let user = self.user {
+        // The user's ID, unique to the Firebase project.
+        // Do NOT use this value to authenticate with your backend server,
+        // if you have one. Use getTokenWithCompletion:completion: instead.
+        let uid = self.user.uid
+        let email = self.user.email
+        // ...
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    
+    }
+        
 //        // Do any additional setup after loading the view.
 //        guard let fullName = Auth.auth().currentUser?.displayName else { return }
 //        namelabel.text = "Hello, \(fullName)!"
