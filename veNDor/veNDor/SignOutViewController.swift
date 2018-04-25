@@ -13,12 +13,25 @@ import SwiftKeychainWrapper
 
 class SignOutViewController: UIViewController {
     
+    var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     
 //    @IBOutlet weak var namelabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //guard let username = Auth.auth().currentUser?.displayName else {return}
+        let userData = Database.database().reference().child("users").child(currentUser!)
+        userData.observeSingleEvent(of: .value, with: { (snapshot) in
+            let data = snapshot.value as! Dictionary<String, AnyObject>
+            let name = data["username"]
+            let email = data["email"]
+            self.nameLabel.text = name as? String
+            self.emailLabel.text = email as? String
+        })
+ 
+        
         
         // Do any additional setup after loading the view.
     

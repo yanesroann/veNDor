@@ -41,7 +41,7 @@ class messageDetailCell: UITableViewCell {
         
         recipientData.observeSingleEvent(of: .value, with: { (snapshot) in
             let data = snapshot.value as! Dictionary<String, AnyObject>
-            let name = data["name"]
+            let name = data["username"]
             self.recipientName.text = name as? String
         })
     }
