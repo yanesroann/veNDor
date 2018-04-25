@@ -17,10 +17,10 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
     
-    var textViewPlaceholderText = "Describe your item here"
+    //var textViewPlaceholderText = "Describe your item here"
     
     @IBAction func UploadPressed(_ sender: UIButton) {
-        if ItemDescription.text != textViewPlaceholderText && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
+        if ItemDescription.text != "" && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
             let PriceInt:Int? = Int(ItemPrice.text!)
             let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!, catagory: ItemCatagory.text!, price: PriceInt!)
             newPost.save()
@@ -30,8 +30,8 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ItemDescription.text = textViewPlaceholderText
-        ItemDescription.textColor = .lightGray
+        //ItemDescription.text = textViewPlaceholderText
+        //ItemDescription.textColor = .lightGray
         //ItemDescription.delegate = self as! UITextFieldDelegate
     }
 
