@@ -15,9 +15,8 @@ class SignOutViewController: UIViewController {
     
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-
+//    @IBOutlet weak var namelabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
