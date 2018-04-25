@@ -13,20 +13,26 @@ import SwiftKeychainWrapper
 
 class SignOutViewController: UIViewController {
     
+    var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     
-//    @IBOutlet weak var namelabel: UILabel!
-    
-    let user = Auth.auth().currentUser
-    if let user = self.user {
-        // The user's ID, unique to the Firebase project.
-        // Do NOT use this value to authenticate with your backend server,
-        // if you have one. Use getTokenWithCompletion:completion: instead.
-        let uid = self.user.uid
-        let email = self.user.email
-        // ...
-    }
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //guard let username = Auth.auth().currentUser?.displayName else {return}
+        let userData = Database.database().reference().child("users").child(currentUser!)
+        userData.observeSingleEvent(of: .value, with: { (snapshot) in
+            let data = snapshot.value as! Dictionary<String, AnyObject>
+            let name = data["username"]
+            let email = data["email"]
+            self.nameLabel.text = name as? String
+            self.emailLabel.text = email as? String
+        })
+ 
+        
         
         // Do any additional setup after loading the view.
     

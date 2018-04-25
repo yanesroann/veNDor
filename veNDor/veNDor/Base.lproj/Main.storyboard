@@ -592,6 +592,10 @@
                         <viewLayoutGuide key="safeArea" id="QtD-KO-y9c"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Account" image="circle-user-7" selectedImage="circle-user-7" id="Kcx-Ls-0pg"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="4AD-lf-arb" id="nI9-kY-uak"/>
+                        <outlet property="nameLabel" destination="XIR-KL-QI4" id="311-9K-dJj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eda-CZ-89z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1080,7 +1084,7 @@
         <image name="vendornoback" width="1242" height="2208"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wn3-yr-C1S"/>
+        <segue reference="X00-sU-N7T"/>
         <segue reference="ZUN-M1-hcv"/>
         <segue reference="hsW-cA-O4T"/>
         <segue reference="k9V-w7-odO"/>
