@@ -20,23 +20,12 @@ class AllItemsFeedViewController: UIViewController, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
             // download posts
-        Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in //child added to database
-             //snapshot is now a dictionary
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
-                print(snapshot)
-                 for data in snapshot{
-                    if data is Post{
-                        //TODO
-                    }
-                    }
-                    
-                }
-                //self.posts.append(newPost)
-                self.tableView.reloadData()
+        Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in
+            print(snapshot)
             }
         }
 
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
