@@ -403,7 +403,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6h-Gx-ARG">
-                                        <rect key="frame" x="10" y="5" width="34" height="30"/>
+                                        <rect key="frame" x="10" y="5" width="37" height="30"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -411,12 +411,21 @@
                                             <action selector="backPressed:" destination="Uc9-en-rxB" eventType="touchUpInside" id="DcG-1f-15b"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="veNDor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-P1-EgF">
+                                        <rect key="frame" x="155" y="10" width="68" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                        <color key="textColor" red="0.76544583070000005" green="1" blue="0.97072480729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.34901960780000002" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="NnR-P1-EgF" firstAttribute="top" secondItem="9oE-kK-Zg3" secondAttribute="top" constant="10" id="Dam-y0-XCE"/>
+                                    <constraint firstItem="NnR-P1-EgF" firstAttribute="leading" secondItem="i6h-Gx-ARG" secondAttribute="trailing" constant="108" id="ITR-cy-0lZ"/>
                                     <constraint firstItem="i6h-Gx-ARG" firstAttribute="leading" secondItem="9oE-kK-Zg3" secondAttribute="leading" constant="10" id="MtS-Ta-2xK"/>
                                     <constraint firstAttribute="height" constant="41" id="QOc-ol-ECF"/>
                                     <constraint firstItem="i6h-Gx-ARG" firstAttribute="top" secondItem="9oE-kK-Zg3" secondAttribute="top" constant="5" id="UXv-nd-aK3"/>
+                                    <constraint firstAttribute="trailing" secondItem="NnR-P1-EgF" secondAttribute="trailing" constant="152" id="d8t-l2-3LL"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -497,9 +506,20 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-ty-myw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="veNDor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-yP-Wav">
+                                        <rect key="frame" x="151" y="10" width="72" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                        <color key="textColor" red="0.76544583070000005" green="1" blue="0.97072480729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.34901960780000002" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wGv-yP-Wav" secondAttribute="trailing" constant="152" id="936-K7-o8I"/>
+                                    <constraint firstItem="wGv-yP-Wav" firstAttribute="leading" secondItem="ksJ-ty-myw" secondAttribute="leading" constant="151" id="HgL-Nu-yYE"/>
                                     <constraint firstAttribute="height" constant="41" id="QbQ-VL-Kyd"/>
+                                    <constraint firstItem="wGv-yP-Wav" firstAttribute="top" secondItem="ksJ-ty-myw" secondAttribute="top" constant="10" id="UOo-9W-WvF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -526,7 +546,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3k-1f-r5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ma0-NM-Jt2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="-479"/>
+            <point key="canvasLocation" x="1668" y="-479.01049475262374"/>
         </scene>
         <!--My Account-->
         <scene sceneID="q28-jb-ddr">
@@ -841,8 +861,19 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IH-kO-h08">
                                 <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="veNDor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpp-Ce-hzB">
+                                        <rect key="frame" x="151" y="10" width="72" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                        <color key="textColor" red="0.76544583070000005" green="1" blue="0.97072480729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.34901960780000002" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="xpp-Ce-hzB" firstAttribute="leading" secondItem="0IH-kO-h08" secondAttribute="leading" constant="151" id="2rq-jz-TMa"/>
+                                    <constraint firstItem="xpp-Ce-hzB" firstAttribute="top" secondItem="0IH-kO-h08" secondAttribute="top" constant="10" id="kpK-gT-CVb"/>
+                                    <constraint firstAttribute="trailing" secondItem="xpp-Ce-hzB" secondAttribute="trailing" constant="152" id="sXx-U6-dtX"/>
                                     <constraint firstAttribute="height" constant="41" id="xvi-j8-8BZ"/>
                                 </constraints>
                             </view>
