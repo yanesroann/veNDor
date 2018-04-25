@@ -15,7 +15,13 @@ class SignOutViewController: UIViewController {
     
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     
-//    @IBOutlet weak var namelabel: UILabel!
+    //@IBOutlet weak var nameLabel: UILabel!
+    //@IBOutlet weak var emailLabel: UILabel!
+    
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
     
     let user = Auth.auth().currentUser
     /*if let user = self.user {
@@ -28,8 +34,7 @@ class SignOutViewController: UIViewController {
     } */
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //guard let username = Auth.auth().currentUser?.displayName else {return}
+       
         let userData = Database.database().reference().child("users").child(currentUser!)
         userData.observeSingleEvent(of: .value, with: { (snapshot) in
             let data = snapshot.value as! Dictionary<String, AnyObject>
