@@ -22,6 +22,7 @@ class AllItemsFeedViewController: UIViewController, UITableViewDelegate, UITable
             // download posts
         Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in
             print(snapshot)
+            //THE PROBLEM AREA
             }
         }
 
