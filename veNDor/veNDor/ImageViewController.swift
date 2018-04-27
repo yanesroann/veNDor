@@ -30,9 +30,6 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ItemDescription.text = textViewPlaceholderText
-        //ItemDescription.textColor = .lightGray
-        //ItemDescription.delegate = self as! UITextFieldDelegate
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
