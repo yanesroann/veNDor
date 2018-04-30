@@ -542,6 +542,16 @@
                                     <constraint firstItem="wGv-yP-Wav" firstAttribute="top" secondItem="ksJ-ty-myw" secondAttribute="top" constant="10" id="UOo-9W-WvF"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the space below to insert image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZID-iR-Tfp">
+                                <rect key="frame" x="87" y="69" width="200" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qwi-Zf-kKm">
+                                <rect key="frame" x="67" y="423" width="245" height="54"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -549,9 +559,12 @@
                             <constraint firstItem="Ftx-M7-jVB" firstAttribute="bottom" secondItem="STn-nh-m5N" secondAttribute="bottom" constant="25" id="4yS-MW-rRB"/>
                             <constraint firstItem="Ftx-M7-jVB" firstAttribute="trailing" secondItem="ksJ-ty-myw" secondAttribute="trailing" id="GB0-za-JaU"/>
                             <constraint firstItem="Seu-oO-bWf" firstAttribute="top" secondItem="ksJ-ty-myw" secondAttribute="bottom" constant="35" id="J3M-6n-yFk"/>
+                            <constraint firstItem="ZID-iR-Tfp" firstAttribute="leading" secondItem="Ftx-M7-jVB" secondAttribute="leading" constant="87" id="Lws-Xk-qrH"/>
                             <constraint firstItem="ksJ-ty-myw" firstAttribute="top" secondItem="Ftx-M7-jVB" secondAttribute="top" id="NoY-tR-F1h"/>
                             <constraint firstItem="Ftx-M7-jVB" firstAttribute="trailing" secondItem="Seu-oO-bWf" secondAttribute="trailing" constant="68" id="Pzg-Ad-wGB"/>
+                            <constraint firstItem="Ftx-M7-jVB" firstAttribute="trailing" secondItem="ZID-iR-Tfp" secondAttribute="trailing" constant="88" id="QPy-I7-qm6"/>
                             <constraint firstItem="STn-nh-m5N" firstAttribute="leading" secondItem="Ftx-M7-jVB" secondAttribute="leading" constant="15" id="UWl-Ur-c0b"/>
+                            <constraint firstItem="ZID-iR-Tfp" firstAttribute="top" secondItem="ksJ-ty-myw" secondAttribute="bottom" constant="8" id="iXs-Fr-Sbd"/>
                             <constraint firstItem="ksJ-ty-myw" firstAttribute="leading" secondItem="Ftx-M7-jVB" secondAttribute="leading" id="kG8-zR-mCf"/>
                             <constraint firstItem="Ftx-M7-jVB" firstAttribute="trailing" secondItem="hZY-99-l7T" secondAttribute="trailing" constant="15" id="qkU-on-GSk"/>
                             <constraint firstItem="Seu-oO-bWf" firstAttribute="leading" secondItem="Ftx-M7-jVB" secondAttribute="leading" constant="67" id="teA-cc-m5L"/>
@@ -564,6 +577,7 @@
                         <outlet property="ItemDescription" destination="rns-kF-fqs" id="MfT-N1-e6W"/>
                         <outlet property="ItemPrice" destination="sED-Sy-mMZ" id="Msd-Jh-IbP"/>
                         <outlet property="imagepicker" destination="Seu-oO-bWf" id="7KM-uL-HrE"/>
+                        <outlet property="pickerView" destination="Qwi-Zf-kKm" id="EI1-zO-BVf"/>
                         <segue destination="mrX-ds-Gve" kind="show" identifier="GoToFeed" id="k9V-w7-odO"/>
                     </connections>
                 </viewController>

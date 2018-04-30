@@ -10,15 +10,16 @@ import UIKit
 import Firebase
 import SwiftyJSON
 
-class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var imagepicker: UIImageView!
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
     
-    //var textViewPlaceholderText = "Describe your item here"
-    
+
+    @IBOutlet weak var pickerView: UIPickerView!
+    let pickerDataSource = ["Furniture", "Clothing", "Tickets", "Lease/Sublease", "Rides"]
     @IBAction func UploadPressed(_ sender: UIButton) {
         if ItemDescription.text != "" && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
             let PriceInt:Int? = Int(ItemPrice.text!)
@@ -28,8 +29,28 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+  //  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+   //     self.uuid.text = pickerDataSource[row]
+  //  }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView!.dataSource = self
+        pickerView!.delegate = self
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
