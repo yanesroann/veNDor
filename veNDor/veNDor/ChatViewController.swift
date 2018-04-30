@@ -76,6 +76,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? MessageViewController {
+            //AlertController.showAlert(self, title: "Warning!", message: "Please use caution when using the chat.")
             destinationViewController.recipient = recipient
             destinationViewController.messageID = messageID
         }

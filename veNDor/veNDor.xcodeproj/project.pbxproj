@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		158B1D3B208BAD340017097B /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158B1D3A208BAD340017097B /* PasswordResetViewController.swift */; };
-		15EE2604209027670069A9CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE2603209027670069A9CC /* ViewController.swift */; };
 		8BFE023DA1AADEAAED03A4C8 /* Pods_veNDorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */; };
 		980757EE208A0F1900989BA5 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980757ED208A0F1900989BA5 /* MessageDetail.swift */; };
 		982DBFF62075240500959356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982DBFF52075240500959356 /* AppDelegate.swift */; };
@@ -77,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		158B1D3A208BAD340017097B /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
-		15EE2603209027670069A9CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B602E1A64DD9D49F9F17F47 /* Pods-veNDor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDor.release.xcconfig"; path = "Pods/Target Support Files/Pods-veNDor/Pods-veNDor.release.xcconfig"; sourceTree = "<group>"; };
 		38B6A31805890AD468BA19A9 /* Pods_veNDorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_veNDorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C575A14E707A5D622D9111 /* Pods-veNDor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-veNDor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-veNDor/Pods-veNDor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 				983E772A207986DA00AB1425 /* SignUpViewController.swift */,
 				983B457B208AB4F200CBE96A /* MessageViewController.swift */,
 				98F7E3C5208B7C0900141F8F /* MessagesCell.swift */,
-				15EE2603209027670069A9CC /* ViewController.swift */,
 				98F7E3C7208B7C7100141F8F /* Message.swift */,
 				98883BAD2083931A00E65A01 /* ChatViewController.swift */,
 				980757ED208A0F1900989BA5 /* MessageDetail.swift */,
@@ -570,7 +567,6 @@
 				9831974A208C0A65003C5BCB /* searchCell.swift in Sources */,
 				98883BB22087971C00E65A01 /* messageDetailCell.swift in Sources */,
 				98F7E3C6208B7C0900141F8F /* MessagesCell.swift in Sources */,
-				15EE2604209027670069A9CC /* ViewController.swift in Sources */,
 				98883BAE2083931A00E65A01 /* ChatViewController.swift in Sources */,
 				98588103207B09F600D7CDF7 /* DataService.swift in Sources */,
 				983B457C208AB4F200CBE96A /* MessageViewController.swift in Sources */,
