@@ -14,16 +14,19 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var imagepicker: UIImageView!
     @IBOutlet weak var ItemDescription: UITextField!
-    @IBOutlet weak var ItemCatagory: UITextField!
+   // @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
     
-
+    var tempCat = "Furniture"
     @IBOutlet weak var pickerView: UIPickerView!
     let pickerDataSource = ["Furniture", "Clothing", "Tickets", "Lease/Sublease", "Rides"]
     @IBAction func UploadPressed(_ sender: UIButton) {
-        if ItemDescription.text != "" && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
+        if ItemDescription.text != ""  && ItemPrice.text != "" && imagepicker != nil {
             let PriceInt:Int? = Int(ItemPrice.text!)
-            let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!, catagory: ItemCatagory.text!, price: PriceInt!)
+            let newPost = Post(image: imagepicker.image!,
+                               caption: ItemDescription.text!,
+                               catagory: tempCat,
+                               price: PriceInt!)
             newPost.save()
             self.performSegue(withIdentifier: "GoToFeed", sender: nil)
         }
@@ -42,9 +45,9 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         return pickerDataSource[row]
     }
     
-  //  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-   //     self.uuid.text = pickerDataSource[row]
-  //  }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+         tempCat = pickerDataSource[row]
+    }
     
     
     override func viewDidLoad() {

@@ -506,17 +506,6 @@
                                     <action selector="UploadPressed:" destination="QwS-nj-qel" eventType="touchUpInside" id="lKx-VJ-1i8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category -- should be a picker" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1e-Yw-uxJ">
-                                <rect key="frame" x="67" y="394" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="categoryTxt:" destination="ma0-NM-Jt2" eventType="editingDidEnd" id="9Jy-QC-TVa"/>
-                                    <action selector="categorytxt:" destination="ma0-NM-Jt2" eventType="editingDidEnd" id="gTi-b0-IGh"/>
-                                </connections>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-oO-bWf">
                                 <rect key="frame" x="67" y="96" width="240" height="216"/>
                                 <constraints>
@@ -573,7 +562,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="box-outgoing-7" selectedImage="box-outgoing-7" id="UlH-yA-7M3"/>
                     <connections>
-                        <outlet property="ItemCatagory" destination="b1e-Yw-uxJ" id="21j-LN-ynf"/>
                         <outlet property="ItemDescription" destination="rns-kF-fqs" id="MfT-N1-e6W"/>
                         <outlet property="ItemPrice" destination="sED-Sy-mMZ" id="Msd-Jh-IbP"/>
                         <outlet property="imagepicker" destination="Seu-oO-bWf" id="7KM-uL-HrE"/>
@@ -582,7 +570,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3k-1f-r5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ma0-NM-Jt2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1668" y="-479.01049475262374"/>
         </scene>
