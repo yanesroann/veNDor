@@ -14,7 +14,6 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBOutlet weak var imagepicker: UIImageView!
     @IBOutlet weak var ItemDescription: UITextField!
-   // @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
     
     var tempCat = "Furniture"
