@@ -25,8 +25,10 @@ class PhotoTableViewCell: UITableViewCell {
     
     func updateUI(){
         self.DisplayDescription.text = post.caption
-        self.DisplayCatagory.text = post.caption
-        self.DisplayPrice.text = post.caption
+        self.DisplayCatagory.text = post.catagory
+        let x: String! = String(describing: post.price)
+
+        self.DisplayPrice.text = x
         
         if let imageDownloadURL = post.downloadURL {
             let imageStorageRef = Storage.storage().reference(forURL: imageDownloadURL)
@@ -41,7 +43,6 @@ class PhotoTableViewCell: UITableViewCell {
                         }
                     }
                 }
-                
             }
         }
     }

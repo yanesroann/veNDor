@@ -10,29 +10,49 @@ import UIKit
 import Firebase
 import SwiftyJSON
 
-class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var imagepicker: UIImageView!
     @IBOutlet weak var ItemDescription: UITextField!
-    @IBOutlet weak var ItemCatagory: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
     
-    //var textViewPlaceholderText = "Describe your item here"
-    
+    var tempCat = "Furniture"
+    @IBOutlet weak var pickerView: UIPickerView!
+    let pickerDataSource = ["Furniture", "Clothing", "Tickets", "Lease/Sublease", "Rides", "Textbooks", "Bikes"]
     @IBAction func UploadPressed(_ sender: UIButton) {
-        if ItemDescription.text != "" && ItemCatagory.text != "" && ItemPrice.text != "" && imagepicker != nil {
+        if ItemDescription.text != ""  && ItemPrice.text != "" && imagepicker != nil {
             let PriceInt:Int? = Int(ItemPrice.text!)
-            let newPost = Post(image: imagepicker.image!, caption: ItemDescription.text!, catagory: ItemCatagory.text!, price: PriceInt!)
+            let newPost = Post(image: imagepicker.image!,
+                               caption: ItemDescription.text!,
+                               catagory: tempCat,
+                               price: PriceInt!)
             newPost.save()
             self.performSegue(withIdentifier: "GoToFeed", sender: nil)
         }
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count;
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+         tempCat = pickerDataSource[row]
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ItemDescription.text = textViewPlaceholderText
-        //ItemDescription.textColor = .lightGray
-        //ItemDescription.delegate = self as! UITextFieldDelegate
+        pickerView!.dataSource = self
+        pickerView!.delegate = self
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

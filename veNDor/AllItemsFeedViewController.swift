@@ -22,7 +22,13 @@ class AllItemsFeedViewController: UIViewController, UITableViewDelegate, UITable
             // download posts
         Database.database().reference().child("posts").observe(.childAdded) { (snapshot) in
             print(snapshot)
-            //THE PROBLEM AREA
+            // snapshot is now a dictionary
+            let newPost = Post(snapshot: snapshot)
+            DispatchQueue.main.async {
+                self.posts.insert(newPost, at: 0)
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.tableView.insertRows(at: [indexPath], with: .top)
+                }
             }
         }
 
