@@ -42,4 +42,6 @@ class Search {
         }
         _userRef = Database.database().reference().child("users").child(_userKey)
     }
+    
+    
 }

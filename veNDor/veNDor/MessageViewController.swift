@@ -24,6 +24,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     var recipient: String!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
@@ -143,10 +144,36 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
                 userMessage.setValue(message)
                 
                 loadData()
+            } else if messageID != "" {
+                let post: Dictionary<String, AnyObject> = [
+                    "message": messageField.text as AnyObject,
+                    "sender": recipient as AnyObject
+                ]
+                
+                let message: Dictionary<String, AnyObject> = [
+                    "lastmessage": messageField.text as AnyObject,
+                    "recipient": recipient as AnyObject
+                ]
+                
+                let recipientMessage: Dictionary<String, AnyObject> = [
+                    "lastmessage": messageField.text as AnyObject,
+                    "recipient": currentUser as AnyObject
+                ]
+                
+                let firebaseMessage = Database.database().reference().child("messages").child(messageID).childByAutoId()
+                
+                firebaseMessage.setValue(post)
+                
+                let recipMessage = Database.database().reference().child("users").child(recipient).child("messages").child(messageID)
+                recipMessage.setValue(recipientMessage)
+                
+                let userMessage = Database.database().reference().child("users").child(currentUser!).child("messages").child(messageID)
+                userMessage.setValue(message)
+                
+                loadData()
             }
             messageField.text = ""
         }
-        
         moveToBottom()
     }
     
