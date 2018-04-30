@@ -18,7 +18,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     var tempCat = "Furniture"
     @IBOutlet weak var pickerView: UIPickerView!
-    let pickerDataSource = ["Furniture", "Clothing", "Tickets", "Lease/Sublease", "Rides"]
+    let pickerDataSource = ["Furniture", "Clothing", "Tickets", "Lease/Sublease", "Rides", "Textbooks", "Bikes"]
     @IBAction func UploadPressed(_ sender: UIButton) {
         if ItemDescription.text != ""  && ItemPrice.text != "" && imagepicker != nil {
             let PriceInt:Int? = Int(ItemPrice.text!)
