@@ -50,6 +50,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             destinationViewController.recipient = recipient
             destinationViewController.messageID = messageID
         }
+        AlertController.showAlert(self, title: "Warning!", message: "Please use caution when using the chat.")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

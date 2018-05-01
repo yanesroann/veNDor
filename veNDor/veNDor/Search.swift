@@ -40,7 +40,7 @@ class Search {
         if let username = postData["username"] as? String {
             _username = username
         }
-        _userRef = Database.database().reference().child("users").child(_userKey)
+        _userRef = Database.database().reference().child("messages").child(_userKey)
     }
     
     

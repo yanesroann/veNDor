@@ -16,6 +16,7 @@ class PhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var DisplayDescription: UILabel!
     @IBOutlet weak var DisplayPrice: UILabel!
     @IBOutlet weak var DisplayCatagory: UILabel!
+    @IBOutlet weak var Email: UILabel!
     
     var post: Post! {
         didSet {
@@ -26,6 +27,7 @@ class PhotoTableViewCell: UITableViewCell {
     func updateUI(){
         self.DisplayDescription.text = post.caption
         self.DisplayCatagory.text = post.catagory
+        self.Email.text = post.email
         let x: String! = String(describing: post.price)
 
         self.DisplayPrice.text = x

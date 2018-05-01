@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SwiftyJSON
+import SwiftKeychainWrapper
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -16,8 +17,13 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemPrice: UITextField!
     
+    var email: String!
+    var currentUser = KeychainWrapper.standard.string(forKey: "uid")
+    
     var tempCat = "Furniture"
     @IBOutlet weak var pickerView: UIPickerView!
+    
+    
     let pickerDataSource = ["Furniture", "Clothing", "Tickets", "Lease/Sublease", "Rides", "Textbooks", "Bikes"]
     @IBAction func UploadPressed(_ sender: UIButton) {
         if ItemDescription.text != ""  && ItemPrice.text != "" && imagepicker != nil {
@@ -25,7 +31,8 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
             let newPost = Post(image: imagepicker.image!,
                                caption: ItemDescription.text!,
                                catagory: tempCat,
-                               price: PriceInt!)
+                               price: PriceInt!,
+                               email: self.email)
             newPost.save()
             self.performSegue(withIdentifier: "GoToFeed", sender: nil)
         }
@@ -53,6 +60,13 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         pickerView!.dataSource = self
         pickerView!.delegate = self
+
+        let userData = Database.database().reference().child("users").child(currentUser!)
+        userData.observeSingleEvent(of: .value, with: { (snapshot) in
+            let data = snapshot.value as! Dictionary<String, AnyObject>
+            let email_real = data["email"]
+            self.email = email_real as! String
+        })
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

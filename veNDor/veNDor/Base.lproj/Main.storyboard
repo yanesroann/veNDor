@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kne-P8-Im4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kne-P8-Im4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Kefa.ttf">
-            <string>Kefa-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--All Items-->
         <scene sceneID="DEZ-GI-FVt">
@@ -93,6 +88,7 @@
                                             <outlet property="DisplayDescription" destination="PjW-TQ-c8P" id="AzP-sO-z2U"/>
                                             <outlet property="DisplayPhoto" destination="8Tv-tc-0iP" id="USo-kB-aMM"/>
                                             <outlet property="DisplayPrice" destination="74X-a2-SE3" id="ZqZ-9u-I9x"/>
+                                            <outlet property="Email" destination="MgB-zg-Zl8" id="Apr-sa-pqN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1133,7 +1129,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="X00-sU-N7T"/>
         <segue reference="ZUN-M1-hcv"/>
-        <segue reference="nZP-CR-bgI"/>
+        <segue reference="hsW-cA-O4T"/>
         <segue reference="k9V-w7-odO"/>
     </inferredMetricsTieBreakers>
 </document>

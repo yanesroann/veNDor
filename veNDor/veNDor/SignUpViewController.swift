@@ -65,8 +65,6 @@ class SignUpViewController: UIViewController {
                 guard let user = user else { return }
                 print(user.email ?? "Missing Email")
                 print(user.uid)
-                
-   
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
             })
         }

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import Firebase
 import SwiftyJSON
+import SwiftKeychainWrapper
+import KeychainSwift
 
 class Post {
     private var image: UIImage!
@@ -17,13 +19,16 @@ class Post {
     var catagory: String!
     var downloadURL: String?
     var price: Int?
+    var email: String!
+    var currentUser = KeychainWrapper.standard.string(forKey: "uid")
+
     
-    
-    init(image: UIImage, caption: String, catagory:String, price:Int) {
+    init(image: UIImage, caption: String, catagory:String, price:Int, email:String) {
         self.image = image
         self.caption = caption
         self.catagory = catagory
         self.price = price
+        self.email = email
     }
     
      init(snapshot: DataSnapshot) {
@@ -32,6 +37,7 @@ class Post {
         self.catagory = json["catagory"].stringValue
         self.downloadURL = json["downloadURL"].stringValue
         self.price = json["price"].intValue
+        self.email = json["email"].stringValue
     }
 
     func save() {
@@ -46,7 +52,8 @@ class Post {
                     "downloadURL" : self.downloadURL as Any,
                     "caption" : self.caption,
                     "catagory" : self.catagory,
-                    "price" : self.price!
+                    "price" : self.price!,
+                    "email": self.email
                     ]
                 
                 newPostRef.setValue(postDictionary)
