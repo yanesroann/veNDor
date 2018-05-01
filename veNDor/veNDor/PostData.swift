@@ -18,7 +18,7 @@ class Post {
     var caption: String!
     var catagory: String!
     var downloadURL: String?
-    var price: Int?
+    var price: Int!
     var email: String!
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
 

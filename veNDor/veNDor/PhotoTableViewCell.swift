@@ -28,9 +28,9 @@ class PhotoTableViewCell: UITableViewCell {
         self.DisplayDescription.text = post.caption
         self.DisplayCatagory.text = post.catagory
         self.Email.text = post.email
-        let x: String! = String(describing: post.price)
+        //let x: String! = String(describing: post.price)
 
-        self.DisplayPrice.text = x
+        self.DisplayPrice.text = String(post.price)
         
         if let imageDownloadURL = post.downloadURL {
             let imageStorageRef = Storage.storage().reference(forURL: imageDownloadURL)
