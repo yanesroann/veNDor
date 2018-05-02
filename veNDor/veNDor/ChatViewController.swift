@@ -79,6 +79,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             destinationViewController.recipient = recipient
             destinationViewController.messageID = messageID
         }
-        AlertController.showAlert(self, title: "Warning!", message: "Please use caution when using the chat.")
+        //AlertController.showAlert(self, title: "Warning!", message: "Please use caution when using the chat.")
     }
 }

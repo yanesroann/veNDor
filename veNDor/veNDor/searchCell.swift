@@ -30,7 +30,7 @@ class searchCell: UITableViewCell {
     
     func configCell(searchDetail: Search) {
         self.searchDetail = searchDetail
-        nameLabel.text = searchDetail.username 
+        nameLabel.text = searchDetail.email
     }
 
 }

@@ -187,12 +187,16 @@
                                     <constraint firstItem="4q1-bp-ucs" firstAttribute="leading" secondItem="aKP-3A-rng" secondAttribute="leading" constant="13" id="wvp-mh-uaP"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" placeholder="Search Friends" translatesAutoresizingMaskIntoConstraints="NO" id="KFm-Q9-VCf">
+                            <searchBar contentMode="redraw" placeholder="Search Friends" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFm-Q9-VCf">
                                 <rect key="frame" x="0.0" y="61" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="X71-I6-va8"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1124,7 +1128,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="X00-sU-N7T"/>
         <segue reference="ZUN-M1-hcv"/>
-        <segue reference="hsW-cA-O4T"/>
+        <segue reference="nZP-CR-bgI"/>
         <segue reference="k9V-w7-odO"/>
     </inferredMetricsTieBreakers>
 </document>

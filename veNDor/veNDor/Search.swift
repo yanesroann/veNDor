@@ -14,21 +14,21 @@ import SwiftKeychainWrapper
 
 
 class Search {
-    private var _username: String!
+    private var _email: String!
     private var _userKey: String!
     private var _userRef: DatabaseReference!
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     
-    var username: String {
-        return _username
+    var email: String {
+        return _email
     }
     
     var userKey: String {
         return _userKey
     }
     
-    init(username: String) {
-        _username = username
+    init(email: String) {
+        _email = email
     }
     
     var userRef: DatabaseReference {
@@ -37,10 +37,10 @@ class Search {
     
     init(userKey: String, postData: Dictionary<String, AnyObject>) {
         _userKey = userKey
-        if let username = postData["username"] as? String {
-            _username = username
+        if let email = postData["email"] as? String {
+            _email = email
         }
-        _userRef = Database.database().reference().child("messages").child(_userKey)
+        _userRef = Database.database().reference().child("users").child(_userKey)
     }
     
     

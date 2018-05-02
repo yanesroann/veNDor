@@ -50,7 +50,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             destinationViewController.recipient = recipient
             destinationViewController.messageID = messageID
         }
-        AlertController.showAlert(self, title: "Warning!", message: "Please use caution when using the chat.")
+        //AlertController.showAlert(self, title: "Warning!", message: "Please use caution when using the chat.")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,7 +98,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             tableView.reloadData()
         } else {
             isSearching = true
-            filteredData = searchDetail.filter({ $0.username == searchBar.text! })
+            filteredData = searchDetail.filter({ $0.email == searchBar.text! })
             tableView.reloadData()
         }
     }
