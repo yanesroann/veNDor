@@ -24,6 +24,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var recipient: String!
     var messageID: String!
     
+    var didClick = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -71,7 +73,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         recipient = messageDetail[indexPath.row].recipient
         messageID = messageDetail[indexPath.row].messageRef.key
-        performSegue(withIdentifier: "toMessages", sender: nil)
+        if didClick == 0 {
+            AlertController.showAlert(self, title: "Warning!", message: "Please use caution when chatting with strangers. The veNDor team encourages the use of this feature for safe and respectful transactions")
+            didClick = 1
+        }
+        else {
+            performSegue(withIdentifier: "toMessages", sender: nil)
+            didClick = 0
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
