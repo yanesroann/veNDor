@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kne-P8-Im4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kne-P8-Im4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Georgia.ttf">
-            <string>Georgia</string>
-        </array>
-        <array key="Kefa.ttf">
-            <string>Kefa-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--All Items-->
         <scene sceneID="DEZ-GI-FVt">
@@ -184,9 +175,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bj5-Yj-JFr">
-                                                    <rect key="frame" x="103" y="12" width="196" height="21"/>
+                                                    <rect key="frame" x="24" y="12" width="196" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -283,34 +274,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DwT-Ax-epH">
-                                                    <rect key="frame" x="177" y="34" width="35.5" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="xEo-ua-Nap"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBG-nT-K71">
-                                                    <rect key="frame" x="22" y="0.0" width="35.5" height="27"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBG-nT-K71">
+                                                    <rect key="frame" x="15" y="5" width="194" height="56"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="EQf-7K-a2e"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DwT-Ax-epH" firstAttribute="leading" secondItem="Kp7-Yo-Xpm" secondAttribute="leadingMargin" constant="162" id="afb-Pb-NCh"/>
                                                 <constraint firstItem="zBG-nT-K71" firstAttribute="top" secondItem="Kp7-Yo-Xpm" secondAttribute="top" id="gBA-cg-e0w"/>
                                                 <constraint firstItem="zBG-nT-K71" firstAttribute="leading" secondItem="Kp7-Yo-Xpm" secondAttribute="leading" constant="22" id="kkg-jn-LjZ"/>
-                                                <constraint firstItem="DwT-Ax-epH" firstAttribute="top" secondItem="Kp7-Yo-Xpm" secondAttribute="topMargin" constant="23" id="p2G-Ob-uCJ" userLabel="Chat Preview.top = topMargin + 2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chatPreview" destination="DwT-Ax-epH" id="jZD-qp-Ye4"/>
                                             <outlet property="recipientName" destination="zBG-nT-K71" id="LVL-Vd-NVt"/>
                                         </connections>
                                     </tableViewCell>
@@ -388,13 +367,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJO-bq-Sws">
                                         <rect key="frame" x="283" y="0.0" width="74" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Send"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="sendPressed:" destination="Uc9-en-rxB" eventType="touchUpInside" id="1UA-LR-A0S"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-kK-Zg3">
                                 <rect key="frame" x="0.0" y="20" width="375" height="41"/>
@@ -460,11 +441,11 @@
                                                             <rect key="frame" x="8" y="8" width="43" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.91764705879999997" green="1" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="1e1-uw-iCK"/>
                                                         <constraint firstAttribute="width" constant="170" id="edZ-xO-SB4"/>
@@ -479,10 +460,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="receivedMessageLabel" destination="LkC-UQ-mbH" id="UzU-Bd-4D5"/>
-                                            <outlet property="receivedMessageView" destination="4bF-vx-JUd" id="C17-jx-847"/>
-                                            <outlet property="sentMessageLabel" destination="uI2-2d-3k2" id="XVO-fy-bGg"/>
-                                            <outlet property="sentMessageView" destination="QBR-AU-i4b" id="LDX-eQ-Mda"/>
+                                            <outlet property="receivedMessageLabel" destination="uI2-2d-3k2" id="Gi2-6z-IcT"/>
+                                            <outlet property="receivedMessageView" destination="QBR-AU-i4b" id="H24-4x-skq"/>
+                                            <outlet property="sentMessageLabel" destination="LkC-UQ-mbH" id="Eum-c5-3HY"/>
+                                            <outlet property="sentMessageView" destination="4bF-vx-JUd" id="QpQ-zG-e5B"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1170,7 +1151,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="X00-sU-N7T"/>
         <segue reference="ZUN-M1-hcv"/>
-        <segue reference="nZP-CR-bgI"/>
+        <segue reference="hsW-cA-O4T"/>
         <segue reference="k9V-w7-odO"/>
     </inferredMetricsTieBreakers>
 </document>
